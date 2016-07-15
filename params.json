@@ -1,6 +1,6 @@
 {
   "name": "Iwxxmconverter",
   "tagline": "Convert IWXXM wheather format to TAC format",
-  "body": "# IWXXMConverter\r\nConvert IWXXM wheather format to TAC format\r\n\r\nSetup Project:\r\n\r\n    1) First run these to batch scripts for creation of realted maven artifacts.\r\n        creare-avxml-maven-artifact.bat\r\n        creare-jweather-maven-artifact.bat\r\n    2) Run WXXMConversionApplication main method.\r\n    2) Enjoy Project!\r\n",
+  "body": "# IWXXMConverter\r\n\r\nThis Tool can help you to convert IWXXM weather file format to TAC (METAR, TAF, SIGMET, SPECI) ones.\r\nfor more information visit these sites:\r\n* [IWXXM File Format]( https://en.wikipedia.org/wiki/IWXXM)\r\n* [METAR](https://en.wikipedia.org/wiki/METAR)\r\n* [Metart And TAF decode](http://sto.iki.fi/metar/)\r\n               \r\nSetup Project:\r\n\r\n    1) First run these to batch scripts for creation of realted maven artifacts.\r\n        creare-avxml-maven-artifact.bat\r\n        creare-jweather-maven-artifact.bat\r\n    2) Run WXXMConversionApplication main method.\r\n    3) Enjoy Project!\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }

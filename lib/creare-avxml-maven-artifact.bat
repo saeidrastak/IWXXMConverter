@@ -1,0 +1,1 @@
+mvn install:install-file    -Dfile=AvXML-1.0RC1-XML-Java_binding.jar   -DgroupId=com.weather.av-xml   -DartifactId=java-binding   -Dversion=1.0.RC1   -Dpackaging=jar   -DgeneratePom=TRUE

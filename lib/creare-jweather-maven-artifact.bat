@@ -1,0 +1,1 @@
+mvn install:install-file    -Dfile=jweather-0.2.5.jar   -DgroupId=com.weather.jweather   -DartifactId=jweather   -Dversion=0.2.5   -Dpackaging=jar   -DgeneratePom=TRUE

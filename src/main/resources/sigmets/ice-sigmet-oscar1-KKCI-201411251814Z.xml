@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<iwxxm-us:SIGMET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release/schemas/usSigmet.xsd"
+ xmlns:iwxxm="http://icao.int/iwxxm/1.1"
+ xmlns:iwxxm-us="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release"
+ xmlns:om="http://www.opengis.net/om/2.0" xmlns:saf="http://icao.int/saf/1.1"
+ xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2"
+ xmlns:metce="http://def.wmo.int/metce/2013" gml:id="ice-sigmet-oscar1-KKCI-201411251814Z"
+ status="NORMAL">
+  <!-- 
+SIGMET OSCAR 1 VALID UNTIL 252214
+ID WY NV UT
+FROM 20NE PIH TO 60ENE SLC TO 40SSW SLC TO 30S TWF TO 20NE PIH
+OCNL SEV MXD ICGICIP BTN 090 AND 160. RPTD BY C208. CONDS CONTG
+BYD 2214Z.
+....
+ -->
+  <iwxxm:issuingAirTrafficServicesUnit>
+    <saf:Unit gml:id="uuid.05c5d4ab4-3fcc-4cae-9215-271f44e7a644">
+      <gml:identifier codeSpace="urn:uuid:">05c5d4ab4-3fcc-4cae-9215-271f44e7a644</gml:identifier>
+      <saf:name>Salt Lake City</saf:name>
+      <saf:type>ATCC</saf:type>
+      <saf:designator>ZLC</saf:designator>
+    </saf:Unit>
+  </iwxxm:issuingAirTrafficServicesUnit>
+  <iwxxm:originatingMeteorologicalWatchOffice>
+    <saf:Unit gml:id="uuid.0820d541-c711-5efd-a557-ce3f1062f1d6">
+      <gml:identifier codeSpace="urn:uuid:">0820d541-c711-5efd-a557-ce3f1062f1d6</gml:identifier>
+      <saf:name>US NATIONAL WEATHER SERVICE - AVIATION WEATHER CENTER</saf:name>
+      <saf:type>MWO</saf:type>
+      <saf:designator>KKCI</saf:designator>
+    </saf:Unit>        
+  </iwxxm:originatingMeteorologicalWatchOffice>
+  <iwxxm:sequenceNumber>OSCAR 1</iwxxm:sequenceNumber>
+  <iwxxm:validPeriod>
+    <gml:TimePeriod gml:id="tp-25T18Z-25T22Z">
+      <gml:beginPosition>2014-11-25T18:14:00Z</gml:beginPosition>
+      <gml:endPosition>2014-11-25T22:14:00Z</gml:endPosition>
+    </gml:TimePeriod>
+  </iwxxm:validPeriod>
+  <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/SEV_ICE" xlink:title="Severe airframe icing"/>
+  <iwxxm:analysis>
+    <om:OM_Observation gml:id="ice-position-and-motion-oscar1-KKCI-201411251814Z">
+      <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/SIGMETEvolvingConditionAnalysis"/>
+      <om:phenomenonTime>
+        <gml:TimeInstant gml:id="ti-25T18Z">
+          <gml:timePosition>2014-11-25T18:14:00Z</gml:timePosition>
+        </gml:TimeInstant>
+      </om:phenomenonTime>
+      <om:resultTime xlink:href="#ti-25T18Z"/>
+      <om:validTime xlink:href="#tp-25T18Z-25T22Z"/>
+      <om:procedure>
+        <metce:Process gml:id="process-NWSI10-811">
+          <gml:description>
+            National Weather Service Instruction 10-811 En-Route Forecasts and Advisories Significant Meteorological Information (SIGMET)
+          </gml:description>
+        </metce:Process>
+      </om:procedure>
+      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/SEV_ICE" xlink:title="Severe airframe icing"/>
+      <om:featureOfInterest/>
+      <om:result>
+        <iwxxm:EvolvingMeteorologicalCondition intensityChange="NO_CHANGE" gml:id="emc-ice-obs-oscar1-KKCI-201411251814Z">
+          <iwxxm:geometry>
+            <saf:AirspaceVolume gml:id="av-ice-obs-position-oscar1-KKCI-201411251814Z">
+              <saf:upperLimit uom="ft">16000</saf:upperLimit>
+              <saf:upperLimitReference>STD</saf:upperLimitReference>
+              <saf:lowerLimit uom="ft">9000</saf:lowerLimit>
+              <saf:lowerLimitReference>STD</saf:lowerLimitReference>
+              <saf:horizontalProjection>
+                <gml:Polygon axisLabels="Lat Lon" gml:id="polygon-ice-obs-position-oscar1-KKCI-201411251814Z" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326" uomLabels="deg deg">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList count="5">
+                        43.10 -112.33 41.23 -110.75 40.23 -112.31 41.98 -114.49 43.10 -112.33
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </saf:horizontalProjection>
+            </saf:AirspaceVolume>
+          </iwxxm:geometry>
+          <iwxxm:speedOfMotion uom="kt">0</iwxxm:speedOfMotion>
+        </iwxxm:EvolvingMeteorologicalCondition>
+      </om:result>
+    </om:OM_Observation>
+  </iwxxm:analysis>
+  <iwxxm-us:continuationAfterInitialValidPeriod>true</iwxxm-us:continuationAfterInitialValidPeriod>
+  <iwxxm-us:isSpecialIssuance>false</iwxxm-us:isSpecialIssuance>
+  <iwxxm-us:isCorrection>false</iwxxm-us:isCorrection>  
+</iwxxm-us:SIGMET>

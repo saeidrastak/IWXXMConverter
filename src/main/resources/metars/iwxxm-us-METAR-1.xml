@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='utf-8'?>
+<iwxxm:METAR automatedStation="false" gml:id="METAR-KJFK-201507131451Z" status="NORMAL" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:iwxxm="http://icao.int/iwxxm/1.1" xmlns:iwxxm="http://nws.weather.gov/schemas/iwxxm/1.0/Release" xmlns:om="http://www.opengis.net/om/2.0" xmlns:saf="http://icao.int/saf/1.1" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nws.weather.gov/schemas/iwxxm/1.0/Release/schemas/usMetarSpeci.xsd ../../schemas/usMetarSpeci.xsd">
+  <iwxxm:observation>
+    <om:OM_Observation gml:id="obs-KJFK-20150713T145100Z">
+      <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeterologicalAerodromeObservation"/>
+      <om:phenomenonTime>
+        <gml:TimeInstant gml:id="metar-KJFK-201507131451Z">
+          <gml:timePosition>2015-07-13T14:51:00Z</gml:timePosition>
+        </gml:TimeInstant>
+      </om:phenomenonTime>
+      <om:resultTime xlink:href="#metar-KJFK-201507131451Z"/>
+      <om:procedure xlink:href="http://nws.weather.gov/schemas/iwxxm/1.0/Release/FMH1-METAR-SPECI.xml"/>
+      <om:observedProperty xlink:href="http://www.ofcm.gov/fmh-1/fmh1.htm"
+                           xlink:title="Federal Meteorological Handbook No.1 - Surface Weather Observations and Reports"/>
+      <om:featureOfInterest>
+        <sams:SF_SpatialSamplingFeature gml:id="samplePt-KJFK">
+          <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint" xlink:title="SF_SamplingPoint"/>
+          <sf:sampledFeature>
+            <saf:Aerodrome gml:id="uuid.d466d365-a25f-48f0-b055-bfda479a9e38">
+              <gml:identifier codeSpace="urn:uuid:">d466d365-a25f-48f0-b055-bfda479a9e38</gml:identifier>
+              <saf:designator>KJFK</saf:designator>
+              <saf:name>NEW YORK/JF KENN, NY</saf:name>
+              <saf:locationIndicatorICAO>KJFK</saf:locationIndicatorICAO>
+              <saf:ARP>
+                <gml:Point axisLabels="Lat Lon Altitude" gml:id="reference-Pt-KJFK" srsName="urn:ogc:def:crs:EPSG::4979" uomLabels="deg deg m">
+                  <gml:pos>40.66 -73.78 7</gml:pos>
+                </gml:Point>
+              </saf:ARP>
+            </saf:Aerodrome>
+          </sf:sampledFeature>
+          <sams:shape xlink:href="#reference-Pt-KJFK"/>
+        </sams:SF_SpatialSamplingFeature>
+      </om:featureOfInterest>
+      <om:result>
+        <iwxxm:MeteorologicalAerodromeObservationRecord cloudAndVisibilityOK="false" gml:id="KJFK-maor">
+          <iwxxm:airTemperature uom="Cel">0.0</iwxxm:airTemperature>
+          <iwxxm:dewpointTemperature uom="Cel">-1.1</iwxxm:dewpointTemperature>
+          <iwxxm:qnh uom="hPa">1008.4</iwxxm:qnh>
+          <iwxxm:surfaceWind>
+            <iwxxm:AerodromeSurfaceWind variableDirection="false">
+              <iwxxm:meanWindDirection uom="deg">040</iwxxm:meanWindDirection>
+              <iwxxm:meanWindSpeed uom="m/s">11.8</iwxxm:meanWindSpeed>
+              <iwxxm:windGust uom="m/s">14.9</iwxxm:windGust>
+            </iwxxm:AerodromeSurfaceWind>
+          </iwxxm:surfaceWind>
+          <iwxxm:visibility>
+            <iwxxm:AerodromeHorizontalVisibility>
+              <iwxxm:prevailingVisibility uom="m">4023.3</iwxxm:prevailingVisibility>
+            </iwxxm:AerodromeHorizontalVisibility>
+          </iwxxm:visibility>
+          <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/FZRA" xlink:title="Precipitation of freezing rain"/>
+          <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/PL" xlink:title="Precipitation of ice pellets"/>
+          <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/BR" xlink:title="Mist"/>
+          <iwxxm:cloud>
+            <iwxxm:AerodromeObservedClouds>
+              <iwxxm:layer>
+                <iwxxm:CloudLayer>
+                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3" xlink:title="Broken"/>
+                  <iwxxm:base uom="ft">1000</iwxxm:base>
+                </iwxxm:CloudLayer>
+              </iwxxm:layer>
+              <iwxxm:layer>
+                <iwxxm:CloudLayer>
+                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3" xlink:title="Broken"/>
+                  <iwxxm:base uom="ft">1400</iwxxm:base>
+                </iwxxm:CloudLayer>
+              </iwxxm:layer>
+              <iwxxm:layer>
+                <iwxxm:CloudLayer>
+                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/4" xlink:title="Overcast"/>
+                  <iwxxm:base uom="ft">2500</iwxxm:base>
+                </iwxxm:CloudLayer>
+              </iwxxm:layer>
+            </iwxxm:AerodromeObservedClouds>
+          </iwxxm:cloud>
+          <iwxxm:seaLevelPressure uom="hPa">1008.3</iwxxm:seaLevelPressure>
+          <iwxxm:pressureChangeIndicator xlink:href="http://nws.weather.gov/codes/FMH-1/2005/PressureChangingRapidly/PRESSURE_FALLING_RAPIDLY"/>
+          <iwxxm:pressureTendency3hr uom="hPa">6.2</iwxxm:pressureTendency3hr>
+          <iwxxm:pressureTendencyCharacteristic3hr xlink:href="http://codes.wmo.int/common/bufr4/codeflag/0-10-063/8"/>
+          <iwxxm:maintenanceIndicator>true</iwxxm:maintenanceIndicator>
+          <iwxxm:snowIncrease>
+            <iwxxm:snowDepth uom="m">2.79e-01</iwxxm:snowDepth>
+            <iwxxm:snowDepthIncrease>
+              <iwxxm:extremeValuePeriod unit="hour">1</iwxxm:extremeValuePeriod>
+              <iwxxm:extremeValueType xlink:href="http://codes.wmo.int/grib2/codeflag/4.10/1" xlink:title="Accumulation"/>
+              <iwxxm:processedValue uom="m/s">7.06e-06</iwxxm:processedValue>
+              <iwxxm:processedWeatherElement xlink:href="http://codes.wmo.int/grib2/codeflag/4.2/0-1-57" xlink:title="Total snowfall rate"/>
+            </iwxxm:snowDepthIncrease>
+          </iwxxm:snowIncrease>
+          <iwxxm:statisticallyProcessedQuantity>
+            <iwxxm:extremeValuePeriod unit="hour">1</iwxxm:extremeValuePeriod>
+            <iwxxm:extremeValueType xlink:href="http://codes.wmo.int/grib2/codeflag/4.10/1" xlink:title="Accumulation"/>
+            <iwxxm:processedValue uom="kg/(s-m^2)">1.13e-03</iwxxm:processedValue>
+            <iwxxm:processedWeatherElement xlink:href="http://nws.weather.gov/codes/FMH-1/2005/StatisticallyProcessedWeatherElements/PrecipitationRate/"/>
+          </iwxxm:statisticallyProcessedQuantity>
+          <iwxxm:statisticallyProcessedQuantity>
+            <iwxxm:extremeValuePeriod unit="hour">3</iwxxm:extremeValuePeriod>
+            <iwxxm:extremeValueType xlink:href="http://codes.wmo.int/grib2/codeflag/4.10/1" xlink:title="Accumulation"/>
+            <iwxxm:processedValue uom="kg/(s-m^2)">2.47e-03</iwxxm:processedValue>
+            <iwxxm:processedWeatherElement xlink:href="http://nws.weather.gov/codes/FMH-1/2005/StatisticallyProcessedWeatherElements/PrecipitationRate/"/>
+          </iwxxm:statisticallyProcessedQuantity>
+          <iwxxm:variationsInObservedProperties>
+            <iwxxm:towerVisibility uom="m">3218.7</iwxxm:towerVisibility>
+            <iwxxm:beginEndWeather>
+              <iwxxm:weatherBeginEndTime gml:id="FZRA-B1420Z">
+                <gml:timePosition>2015-07-13T14:20:00Z</gml:timePosition>
+              </iwxxm:weatherBeginEndTime>
+              <iwxxm:weatherBeginOrEnd xlink:href="http://nws.weather.gov/codes/FMH-1/2005/BeginOrEnd/BEGIN"/>
+              <iwxxm:weatherType xlink:href="http://codes.wmo.int/306/4678/FZRA" xlink:title="Precipitation of freezing rain"/>
+            </iwxxm:beginEndWeather>
+            <iwxxm:beginEndWeather>
+              <iwxxm:weatherBeginEndTime gml:id="SN-E1428Z">
+                <gml:timePosition>2015-07-13T14:28:00Z</gml:timePosition>
+              </iwxxm:weatherBeginEndTime>
+              <iwxxm:weatherBeginOrEnd xlink:href="http://nws.weather.gov/codes/FMH-1/2005/BeginOrEnd/END"/>
+              <iwxxm:weatherType xlink:href="http://codes.wmo.int/306/4678/SN" xlink:title="Precipitation of snow"/>
+            </iwxxm:beginEndWeather>
+            <iwxxm:aerodromePeakWind>
+              <iwxxm:peakWindDirection uom="deg">40</iwxxm:peakWindDirection>
+              <iwxxm:peakWindSpeed uom="m/s">15.9</iwxxm:peakWindSpeed>
+              <iwxxm:timeOfPeakWind gml:id="peakWind-1434Z">
+                <gml:timePosition>2015-07-13T14:34:00Z</gml:timePosition>
+              </iwxxm:timeOfPeakWind>
+            </iwxxm:aerodromePeakWind>
+          </iwxxm:variationsInObservedProperties>
+        </iwxxm:MeteorologicalAerodromeObservationRecord>
+      </om:result>
+    </om:OM_Observation>
+  </iwxxm:observation>
+  <iwxxm:observingSystemType xlink:href="http://nws.weather.gov/codes/FMH-1/2005/ObservingSystemType/AUTOMATED_WITH_PRESENT_WEATHER"/>
+</iwxxm:METAR>
+

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iwxxm-us:SIGMET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release/schemas/usSigmet.xsd ../../schemas/usSigmet.xsd" 
+ xmlns:iwxxm="http://icao.int/iwxxm/1.1"
+ xmlns:iwxxm-us="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release"
+ xmlns:om="http://www.opengis.net/om/2.0" 
+ xmlns:saf="http://icao.int/saf/1.1"
+ xmlns:wxxm="http://www.wxxm.aero/wxxm/2.0"
+ xmlns:gml="http://www.opengis.net/gml/3.2" status="CANCELLATION" gml:id="sigmet">
+    <!--
+    The ATS unit serving the FIR or CTA to which the SIGMET refers
+    -->
+    <iwxxm:issuingAirTrafficServicesUnit >
+        <saf:Unit gml:id="fo1"></saf:Unit>
+    </iwxxm:issuingAirTrafficServicesUnit>
+    <iwxxm:originatingMeteorologicalWatchOffice >
+        <saf:Unit gml:id="fo2"></saf:Unit>
+    </iwxxm:originatingMeteorologicalWatchOffice>
+    <iwxxm:sequenceNumber></iwxxm:sequenceNumber>
+    <!--    
+     The valid period for the entire report, including all observations and forecast conditions.
+     Each observation/forecast phenomenon includes its own period of validity for described
+     meteorological conditions, which is represented as the O&M Observation validTime.
+    -->
+    <iwxxm:validPeriod >
+        <gml:TimePeriod gml:id="fo3">
+            <gml:begin></gml:begin>
+            <gml:end></gml:end>
+        </gml:TimePeriod>
+    </iwxxm:validPeriod>
+    <!--  
+        <iwxxm:cancelled* > elements do not appear when SIGMET status="NORMAL"
+        however they must appear when status="CANCELLATION"
+    -->
+    <iwxxm:cancelledSequenceNumber></iwxxm:cancelledSequenceNumber>
+    <iwxxm:cancelledValidPeriod >
+        <gml:TimePeriod gml:id="fo13">
+            <gml:begin></gml:begin>
+            <gml:end></gml:end>
+        </gml:TimePeriod>
+    </iwxxm:cancelledValidPeriod>
+    <iwxxm:phenomenon />
+    <!-- 
+        <iwxxm:analysis> is optional but unbounded in number [0..*]
+    -->
+    <iwxxm:analysis>
+        <om:OM_Observation gml:id="fo4">
+            <om:phenomenonTime></om:phenomenonTime>
+            <om:resultTime></om:resultTime>
+            <om:procedure/>
+            <om:observedProperty/>
+            <om:featureOfInterest/>
+            <om:result>
+                <iwxxm:EvolvingMeteorologicalCondition intensityChange="NO_CHANGE" gml:id="emc-1">
+                    <iwxxm:directionOfMotion uom="deg">360</iwxxm:directionOfMotion>
+                    <iwxxm:geometry>
+                        <saf:AirspaceVolume gml:id="av1">
+                            <saf:horizontalProjection>
+                                <gml:Polygon gml:id="avpoly1">
+                                    <gml:exterior>
+                                        <gml:LinearRing>
+                                            <gml:posList></gml:posList>
+                                        </gml:LinearRing>
+                                    </gml:exterior>
+                                </gml:Polygon>
+                            </saf:horizontalProjection>
+                        </saf:AirspaceVolume>
+                    </iwxxm:geometry>
+                    <iwxxm:speedOfMotion uom="m/s">17.5</iwxxm:speedOfMotion>
+                </iwxxm:EvolvingMeteorologicalCondition>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:analysis>
+    <!--
+        <iwxxm:forecastPositionAnalysis> is optional [0..1] 
+ 
+    <iwxxm:forecastPositionAnalysis>
+        <om:OM_Observation gml:id="f05">
+            <om:phenomenonTime ></om:phenomenonTime>
+            <om:resultTime ></om:resultTime>
+            <om:procedure />
+            <om:observedProperty />
+            <om:featureOfInterest />
+            <om:result></om:result>
+        </om:OM_Observation>
+    </iwxxm:forecastPositionAnalysis>
+    -->
+    <iwxxm-us:convectionGeometry/>
+    <iwxxm-us:basisForIssuance/>
+    <iwxxm-us:continuationAfterInitialValidPeriod>false</iwxxm-us:continuationAfterInitialValidPeriod>
+    <iwxxm-us:isSpecialIssuance>false</iwxxm-us:isSpecialIssuance>
+    <iwxxm-us:isCorrection>false</iwxxm-us:isCorrection>
+</iwxxm-us:SIGMET>

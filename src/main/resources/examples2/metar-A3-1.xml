@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<METAR gml:id="Metar_001" status="NORMAL" automatedStation="false" xsi:schemaLocation="http://schemas.wmo.int/iwxxm/1.0RC1 ./iwxxm.xsd http://schemas.wmo.int/metce/1.0RC1 ./metce.xsd" xmlns="http://icao.int/iwxxm/1.0RC1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="http://www.opengis.net/om/2.0" xmlns:xlin="http://www.w3.org/1999/xlink" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:sam="http://www.opengis.net/sampling/2.0">
+  <observation>
+    <om:OM_Observation gml:id="obs-yudo-20120822163000">
+      <om:type xlin:href="http://data.wmo.int/def/49/MeteorologicalAerodromeObservation" xlin:title="Aerodrome Observation"/>
+      <om:phenomenonTime>
+        <gml:TimeInstant gml:id="time-instant-20120822163000">
+          <gml:timePosition frame="#ISO-8601">2012-08-22T16:30:00+00:00</gml:timePosition>
+        </gml:TimeInstant>
+      </om:phenomenonTime>
+      <om:resultTime>
+        <gml:TimeInstant gml:id="time-instant-20121206085813" frame="#ISO-8601">
+          <gml:timePosition frame="#ISO-8601">2012-12-06T08:58:13+00:00</gml:timePosition>
+        </gml:TimeInstant>
+      </om:resultTime>
+      <om:procedure xlin:href="http://data.wmo.int/def/process/AutomatedMETARObservation" xlin:title="Automated METAR"/>
+      <om:observedProperty xlin:href="http://icao.int/property/AerodromeWeather-obs" xlin:title="METAR observation properties"/>
+      <om:featureOfInterest>
+        <sams:SF_SpatialSamplingFeature gml:id="SFSpatialSamplingFeature_001">
+          <sam:type xlin:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint" xlin:title="SF_SamplingPoint"/>
+          <sam:sampledFeature xlin:href="http://icao.int/id/aerodrome/YUDO" xlin:title="Fake Airport"/>
+          <sams:shape>
+            <gml:Point gml:id="Point_001">
+              <gml:pos axisLabels="Lat Lon" srsName="http://www.opengis.net/def/crs/EPSG/0/4326" srsDimension="2">0.00 0.00</gml:pos>
+            </gml:Point>
+          </sams:shape>
+        </sams:SF_SpatialSamplingFeature>
+      </om:featureOfInterest>
+      <om:result>
+        <MeteorologicalAerodromeObservationRecord gml:id="ObservationRecord_001" ceilingAndVisibilityOK="false">
+          <airTemperature uom="http://opengis.net/def/uom/UCUM/0/C">17.0</airTemperature>
+          <dewpointTemperature uom="http://opengis.net/def/uom/UCUM/0/C">16.0</dewpointTemperature>
+          <qnh uom="http://opengis.net/def/uom/UCUM/0/hPa">1018.0</qnh>
+          <surfaceWind>
+            <AerodromeSurfaceWind variableDirection="false">
+              <meanWindDirection uom="http://opengis.net/def/uom/UCUM/0/deg">240.0</meanWindDirection>
+              <windSpeed uom="http://opengis.net/def/uom/UCUM/0/m/s">4.0</windSpeed>
+            </AerodromeSurfaceWind>
+          </surfaceWind>
+          <presentWeather xlin:href="http://data.wmo.int/def/49-2/AerodromePresentWeather/DZ" xlin:title="Drizzle"/>
+          <presentWeather xlin:href="http://data.wmo.int/def/49-2/AerodromePresentWeather/FG" xlin:title="Fog"/>
+          <visibility>
+            <AerodromeHorizontalVisibility>
+              <prevailingVisibility uom="http://opengis.net/def/uom/UCUM/0/m">600.0</prevailingVisibility>
+            </AerodromeHorizontalVisibility>
+          </visibility>
+          <cloud>
+            <AerodromeObservedClouds>
+              <layer>
+                <CloudLayer>
+                  <amount xlin:href="http://data.wmo.int/def/49-2/CloudAmountReportedAtAerodrome/2" xlin:title="Scattered"/>
+                  <base uom="http://opengis.net/def/uom/UCUM/0/ft">1000.0</base>
+                </CloudLayer>
+              </layer>
+              <layer>
+                <CloudLayer>
+                  <amount xlin:href="http://data.wmo.int/def/49-2/CloudAmountReportedAtAerodrome/4" xlin:title="Overcast"/>
+                  <base uom="http://opengis.net/def/uom/UCUM/0/ft">2000.0</base>
+                </CloudLayer>
+              </layer>
+            </AerodromeObservedClouds>
+          </cloud>
+        </MeteorologicalAerodromeObservationRecord>
+      </om:result>
+    </om:OM_Observation>
+  </observation>
+  <trendForecast>
+    <om:OM_Observation gml:id="trend-fcst-1-yudo">
+      <om:type xlin:href="http://data.wmo.int/def/49/observationType/MeteorologicalAerodromeTrendForecast" xlin:title="Aerodrome Trend Forecast"/>
+      <om:phenomenonTime>
+        <gml:TimePeriod gml:id="time-period-20120822163000-20120822170000">
+          <gml:beginPosition>2012-08-22T16:30:00+00:00</gml:beginPosition>
+          <gml:endPosition>2012-08-22T17:00:00+00:00</gml:endPosition>
+        </gml:TimePeriod>
+      </om:phenomenonTime>
+      <om:resultTime>
+        <gml:TimeInstant gml:id="fcst-time-instant1-20121206085813" frame="#ISO-8601">
+          <gml:timePosition frame="#ISO-8601">2012-12-06T08:58:13+00:00</gml:timePosition>
+        </gml:TimeInstant>
+      </om:resultTime>
+      <om:procedure xlin:href="http://data.wmo.int/def/process/HumanGeneratedTrendForecast" xlin:title="Human-generated trend forecast"/>
+      <om:observedProperty xlin:href="http://icao.int/property/AerodromeWeather-trend-fcst" xlin:title="METAR trend forecast properties"/>
+      <om:featureOfInterest xlin:href="#SFSpatialSamplingFeature_001"/>
+      <om:result>
+        <MeteorologicalAerodromeTrendForecastRecord gml:id="trend-fcst-record1-YUDO" ceilingAndVisibilityOK="false" changeIndicator="BECOMING">
+          <prevailingHorizontalVisibility uom="http://opengis.net/def/uom/UCUM/0/m">800.0</prevailingHorizontalVisibility>
+          <forecastWeather xlin:href="http://data.wmo.int/def/49-2/AerodromeForecastWeather/FG" xlin:title="Fog"/>
+        </MeteorologicalAerodromeTrendForecastRecord>
+      </om:result>
+    </om:OM_Observation>
+  </trendForecast>
+  <trendForecast>
+    <om:OM_Observation gml:id="trend-fcst-2-yudo">
+      <om:type xlin:href="http://data.wmo.int/def/49/observationType/MeteorologicalAerodromeTrendForecast" xlin:title="Aerodrome Trend Forecast"/>
+      <om:phenomenonTime>
+        <gml:TimePeriod gml:id="time-period-20120822180000-20120822190000">
+          <gml:beginPosition>2012-08-22T18:00:00+00:00</gml:beginPosition>
+          <gml:endPosition>2012-08-22T19:00:00+00:00</gml:endPosition>
+        </gml:TimePeriod>
+      </om:phenomenonTime>
+      <om:resultTime>
+        <gml:TimeInstant gml:id="fcst-time-instant2-20121206085813" frame="#ISO-8601">
+          <gml:timePosition frame="#ISO-8601">2012-12-06T08:58:13+00:00</gml:timePosition>
+        </gml:TimeInstant>
+      </om:resultTime>
+      <om:procedure xlin:href="http://data.wmo.int/def/process/HumanGeneratedTrendForecast" xlin:title="Human-generated trend forecast"/>
+      <om:observedProperty xlin:href="http://icao.int/property/AerodromeWeather-trend-fcst" xlin:title="METAR trend forecast properties"/>
+      <om:featureOfInterest xlin:href="#SFSpatialSamplingFeature_001"/>
+      <om:result>
+        <MeteorologicalAerodromeTrendForecastRecord gml:id="trend-fcst-record2-YUDO" ceilingAndVisibilityOK="false" changeIndicator="BECOMING">
+          <prevailingHorizontalVisibility uom="http://opengis.net/def/uom/UCUM/0/km">10.0</prevailingHorizontalVisibility>
+          <forecastWeather nilReason="http://data.wmo.int/def/nil-reason/nothingOfOperationalSignificance"/>
+        </MeteorologicalAerodromeTrendForecastRecord>
+      </om:result>
+    </om:OM_Observation>
+  </trendForecast>
+</METAR>

@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='utf-8'?>
+<iwxxm-us:SPECI gml:id="SPECI-KSAV-201507200916Z" status="NORMAL" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:iwxxm="http://icao.int/iwxxm/1.1" xmlns:iwxxm-us="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release" xmlns:om="http://www.opengis.net/om/2.0" xmlns:saf="http://icao.int/saf/1.1" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release/schemas/usMetarSpeci.xsd ../../schemas/usMetarSpeci.xsd">
+  <iwxxm:observation>
+    <om:OM_Observation gml:id="obs-KSAV-20150720T091600Z">
+      <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeterologicalAerodromeObservation"/>
+      <om:phenomenonTime>
+        <gml:TimeInstant gml:id="speci-KSAV-201507200916Z">
+          <gml:timePosition>2015-07-20T09:16:00Z</gml:timePosition>
+        </gml:TimeInstant>
+      </om:phenomenonTime>
+      <om:resultTime xlink:href="#speci-KSAV-201507200916Z"/>
+      <om:procedure xlink:href="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release/FMH1-METAR-SPECI.xml"/>
+      <om:observedProperty xlink:href="http://www.ofcm.gov/fmh-1/fmh1.htm"
+                           xlink:title="Federal Meteorological Handbook No.1 - Surface Weather Observations and Reports"/>
+      <om:featureOfInterest>
+        <sams:SF_SpatialSamplingFeature gml:id="samplePt-KSAV">
+          <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint" xlink:title="SF_SamplingPoint"/>
+          <sf:sampledFeature>
+            <saf:Aerodrome gml:id="uuid.fcd2beb4-a1d6-419a-a3ba-cc1576388926">
+              <gml:identifier codeSpace="urn:uuid:">fcd2beb4-a1d6-419a-a3ba-cc1576388926</gml:identifier>
+              <saf:designator>KSAV</saf:designator>
+              <saf:name>SAVANNAH MUNICIP, GA</saf:name>
+              <saf:locationIndicatorICAO>KSAV</saf:locationIndicatorICAO>
+              <saf:ARP>
+                <gml:Point axisLabels="Lat Lon Altitude" gml:id="reference-Pt-KSAV" srsName="urn:ogc:def:crs:EPSG::4979" uomLabels="deg deg m">
+                  <gml:pos>32.14 -81.20 15</gml:pos>
+                </gml:Point>
+              </saf:ARP>
+            </saf:Aerodrome>
+          </sf:sampledFeature>
+          <sams:shape xlink:href="#reference-Pt-KSAV"/>
+        </sams:SF_SpatialSamplingFeature>
+      </om:featureOfInterest>
+      <om:resultQuality>
+        <gmd:DQ_CompletenessOmission>
+          <gmd:result>
+            <gmd:DQ_ConformanceResult>
+              <gmd:specification xlink:href="http://nws.weather.gov/codes/FMH-1/2005/SensorStatus/PRESENT_WEATHER"/>
+              <gmd:explanation gco:nilReason="missing"/>
+              <gmd:pass>
+                <gco:Boolean>false</gco:Boolean>
+              </gmd:pass>
+            </gmd:DQ_ConformanceResult>
+          </gmd:result>
+        </gmd:DQ_CompletenessOmission>
+      </om:resultQuality>
+      <om:resultQuality>
+        <gmd:DQ_CompletenessOmission>
+          <gmd:result>
+            <gmd:DQ_ConformanceResult>
+              <gmd:specification xlink:href="http://nws.weather.gov/codes/FMH-1/2005/SensorStatus/THUNDERSTORM"/>
+              <gmd:explanation gco:nilReason="missing"/>
+              <gmd:pass>
+                <gco:Boolean>false</gco:Boolean>
+              </gmd:pass>
+            </gmd:DQ_ConformanceResult>
+          </gmd:result>
+        </gmd:DQ_CompletenessOmission>
+      </om:resultQuality>
+      <om:result>
+        <iwxxm-us:MeteorologicalAerodromeObservationRecord cloudAndVisibilityOK="false" gml:id="KSAV-maor">
+          <iwxxm:airTemperature uom="Cel">14</iwxxm:airTemperature>
+          <iwxxm:dewpointTemperature uom="Cel">13</iwxxm:dewpointTemperature>
+          <iwxxm:qnh uom="hPa">1019.9</iwxxm:qnh>
+          <iwxxm:surfaceWind>
+            <iwxxm:AerodromeSurfaceWind variableDirection="false">
+              <iwxxm:meanWindDirection uom="deg">170</iwxxm:meanWindDirection>
+              <iwxxm:meanWindSpeed uom="m/s">1.5</iwxxm:meanWindSpeed>
+            </iwxxm:AerodromeSurfaceWind>
+          </iwxxm:surfaceWind>
+          <iwxxm:visibility>
+            <iwxxm:AerodromeHorizontalVisibility>
+              <iwxxm:prevailingVisibility uom="m">2011.7</iwxxm:prevailingVisibility>
+            </iwxxm:AerodromeHorizontalVisibility>
+          </iwxxm:visibility>
+          <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/BR" xlink:title="Mist"/>
+          <iwxxm:cloud>
+            <iwxxm:AerodromeObservedClouds>
+              <iwxxm:layer>
+                <iwxxm:CloudLayer>
+                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/1" xlink:title="Few"/>
+                  <iwxxm:base uom="ft">200</iwxxm:base>
+                </iwxxm:CloudLayer>
+              </iwxxm:layer>
+            </iwxxm:AerodromeObservedClouds>
+          </iwxxm:cloud>
+          <iwxxm-us:variationsInObservedProperties>
+            <iwxxm-us:variableVisibility>
+              <iwxxm-us:maximumVisibility>
+                <iwxxm-us:extremeValuePeriod unit="minute">10</iwxxm-us:extremeValuePeriod>
+                <iwxxm-us:extremeValueType xlink:href="http://codes.wmo.int/grib2/codeflag/4.10/2" xlink:title="Maximum"/>
+                <iwxxm-us:processedValue uom="m">4828.0</iwxxm-us:processedValue>
+                <iwxxm-us:processedWeatherElement xlink:href="http://codes.wmo.int/common/quantity-kind/aeronauticalVisibility"/>
+              </iwxxm-us:maximumVisibility>
+              <iwxxm-us:minimumVisibility>
+                <iwxxm-us:extremeValuePeriod unit="minute">10</iwxxm-us:extremeValuePeriod>
+                <iwxxm-us:extremeValueType xlink:href="http://codes.wmo.int/grib2/codeflag/4.10/3" xlink:title="Minimum"/>
+                <iwxxm-us:processedValue uom="m">1207.0</iwxxm-us:processedValue>
+                <iwxxm-us:processedWeatherElement xlink:href="http://codes.wmo.int/common/quantity-kind/aeronauticalVisibility"/>
+              </iwxxm-us:minimumVisibility>
+              <iwxxm-us:belowMinimumReportable>false</iwxxm-us:belowMinimumReportable>
+            </iwxxm-us:variableVisibility>
+            <iwxxm-us:variableRVR>
+              <iwxxm-us:runway>
+                <saf:RunwayDirection gml:id="VRBRVRRWY_01">
+                  <saf:designator>01</saf:designator>
+                </saf:RunwayDirection>
+              </iwxxm-us:runway>
+              <iwxxm-us:maximumRVR uom="m">1219.2</iwxxm-us:maximumRVR>
+              <iwxxm-us:minimumRVR uom="m">670.6</iwxxm-us:minimumRVR>
+            </iwxxm-us:variableRVR>
+          </iwxxm-us:variationsInObservedProperties>
+        </iwxxm-us:MeteorologicalAerodromeObservationRecord>
+      </om:result>
+    </om:OM_Observation>
+  </iwxxm:observation>
+  <iwxxm-us:observingSystemType xlink:href="http://nws.weather.gov/codes/FMH-1/2005/ObservingSystemType/AUTOMATED_WITH_PRESENT_WEATHER"/>
+</iwxxm-us:SPECI>
+

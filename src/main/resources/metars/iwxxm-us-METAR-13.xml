@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8'?>
+<iwxxm-us:SPECI automatedStation="false" gml:id="SPECI-KABQ-201507152126Z" status="NORMAL" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:iwxxm="http://icao.int/iwxxm/1.1" xmlns:iwxxm-us="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release" xmlns:om="http://www.opengis.net/om/2.0" xmlns:saf="http://icao.int/saf/1.1" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release/schemas/usMetarSpeci.xsd ../../schemas/usMetarSpeci.xsd">
+  <iwxxm:observation>
+    <om:OM_Observation gml:id="obs-KABQ-20150715T212600Z">
+      <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeterologicalAerodromeObservation"/>
+      <om:phenomenonTime>
+        <gml:TimeInstant gml:id="speci-KABQ-201507152126Z">
+          <gml:timePosition>2015-07-15T21:26:00Z</gml:timePosition>
+        </gml:TimeInstant>
+      </om:phenomenonTime>
+      <om:resultTime xlink:href="#speci-KABQ-201507152126Z"/>
+      <om:procedure xlink:href="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release/FMH1-METAR-SPECI.xml"/>
+      <om:observedProperty xlink:href="http://www.ofcm.gov/fmh-1/fmh1.htm"
+                           xlink:title="Federal Meteorological Handbook No.1 - Surface Weather Observations and Reports"/>
+      <om:featureOfInterest>
+        <sams:SF_SpatialSamplingFeature gml:id="samplePt-KABQ">
+          <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint" xlink:title="SF_SamplingPoint"/>
+          <sf:sampledFeature>
+            <saf:Aerodrome gml:id="uuid.5de1ea55-77af-4bbc-963e-9cac8a967102">
+              <gml:identifier codeSpace="urn:uuid:">5de1ea55-77af-4bbc-963e-9cac8a967102</gml:identifier>
+              <saf:designator>KABQ</saf:designator>
+              <saf:name>ALBUQUERQ/KRTLND, NM</saf:name>
+              <saf:locationIndicatorICAO>KABQ</saf:locationIndicatorICAO>
+              <saf:ARP>
+                <gml:Point axisLabels="Lat Lon Altitude" gml:id="reference-Pt-KABQ" srsName="urn:ogc:def:crs:EPSG::4979" uomLabels="deg deg m">
+                  <gml:pos>35.05 -106.62 1620</gml:pos>
+                </gml:Point>
+              </saf:ARP>
+            </saf:Aerodrome>
+          </sf:sampledFeature>
+          <sams:shape xlink:href="#reference-Pt-KABQ"/>
+        </sams:SF_SpatialSamplingFeature>
+      </om:featureOfInterest>
+      <om:result>
+        <iwxxm-us:MeteorologicalAerodromeObservationRecord cloudAndVisibilityOK="false" gml:id="KABQ-maor">
+          <iwxxm:airTemperature uom="Cel">12.8</iwxxm:airTemperature>
+          <iwxxm:dewpointTemperature uom="Cel">-5.0</iwxxm:dewpointTemperature>
+          <iwxxm:qnh uom="hPa">1013.4</iwxxm:qnh>
+          <iwxxm:surfaceWind>
+            <iwxxm:AerodromeSurfaceWind variableDirection="false">
+              <iwxxm:meanWindDirection uom="deg">350</iwxxm:meanWindDirection>
+              <iwxxm:meanWindSpeed uom="m/s">11.8</iwxxm:meanWindSpeed>
+              <iwxxm:windGust uom="m/s">15.9</iwxxm:windGust>
+            </iwxxm:AerodromeSurfaceWind>
+          </iwxxm:surfaceWind>
+          <iwxxm:visibility>
+            <iwxxm:AerodromeHorizontalVisibility>
+              <iwxxm:prevailingVisibility uom="m">16093.4</iwxxm:prevailingVisibility>
+            </iwxxm:AerodromeHorizontalVisibility>
+          </iwxxm:visibility>
+          <iwxxm:cloud>
+            <iwxxm:AerodromeObservedClouds>
+              <iwxxm:layer>
+                <iwxxm:CloudLayer>
+                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/1" xlink:title="Few"/>
+                  <iwxxm:base uom="ft">3000</iwxxm:base>
+                </iwxxm:CloudLayer>
+              </iwxxm:layer>
+              <iwxxm:layer>
+                <iwxxm:CloudLayer>
+                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/2" xlink:title="Scattered"/>
+                  <iwxxm:base uom="ft">6000</iwxxm:base>
+                </iwxxm:CloudLayer>
+              </iwxxm:layer>
+              <iwxxm:layer>
+                <iwxxm:CloudLayer>
+                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3" xlink:title="Broken"/>
+                  <iwxxm:base uom="ft">9000</iwxxm:base>
+                  <iwxxm:cloudType xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-012/9" xlink:title="Cumulonimbus"/>
+                </iwxxm:CloudLayer>
+              </iwxxm:layer>
+              <iwxxm:layer>
+                <iwxxm:CloudLayer>
+                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3" xlink:title="Broken"/>
+                  <iwxxm:base uom="ft">13000</iwxxm:base>
+                </iwxxm:CloudLayer>
+              </iwxxm:layer>
+            </iwxxm:AerodromeObservedClouds>
+          </iwxxm:cloud>
+          <iwxxm-us:humanReadableText>CB DSNT NE SHRA DSNT NE-SE MTNS OBSC NE-SE</iwxxm-us:humanReadableText>
+          <iwxxm-us:maintenanceIndicator>true</iwxxm-us:maintenanceIndicator>
+          <iwxxm-us:visuallyObservablePhenomena>
+            <iwxxm-us:significantWeatherAndCloudLocation>
+              <iwxxm-us:convectionExtremeCounterClockwiseDirection uom="deg">337.5</iwxxm-us:convectionExtremeCounterClockwiseDirection>
+              <iwxxm-us:convectionExtremeClockwiseDirection uom="deg">22.5</iwxxm-us:convectionExtremeClockwiseDirection>
+              <iwxxm-us:convectionDirectionOfMotion uom="deg">180</iwxxm-us:convectionDirectionOfMotion>
+            </iwxxm-us:significantWeatherAndCloudLocation>
+            <iwxxm-us:lightning>
+              <iwxxm-us:lightningExtremeCounterClockwiseDirection uom="deg">337.5</iwxxm-us:lightningExtremeCounterClockwiseDirection>
+              <iwxxm-us:lightningExtremeClockwiseDirection uom="deg">67.5</iwxxm-us:lightningExtremeClockwiseDirection>
+              <iwxxm-us:lightningDistance xlink:href="http://nws.weather.gov/codes/FMH-1/2005/ConvectionDistance/DISTANT/" xlink:title="DISTANT"/>
+            </iwxxm-us:lightning>
+          </iwxxm-us:visuallyObservablePhenomena>
+          <iwxxm-us:variationsInObservedProperties>
+            <iwxxm-us:aerodromePeakWind>
+              <iwxxm-us:peakWindDirection uom="deg">330</iwxxm-us:peakWindDirection>
+              <iwxxm-us:peakWindSpeed uom="m/s">15.9</iwxxm-us:peakWindSpeed>
+              <iwxxm-us:timeOfPeakWind gml:id="peakWind-2105Z">
+                <gml:timePosition>2015-07-15T21:05:00Z</gml:timePosition>
+              </iwxxm-us:timeOfPeakWind>
+            </iwxxm-us:aerodromePeakWind>
+          </iwxxm-us:variationsInObservedProperties>
+        </iwxxm-us:MeteorologicalAerodromeObservationRecord>
+      </om:result>
+    </om:OM_Observation>
+  </iwxxm:observation>
+  <iwxxm-us:observingSystemType xlink:href="http://nws.weather.gov/codes/FMH-1/2005/ObservingSystemType/AUTOMATED_WITH_PRESENT_WEATHER"/>
+</iwxxm-us:SPECI>
+

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<iwxxm-us:METAR automatedStation="false" gml:id="METAR-KALB-201507202251Z" status="NORMAL" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:iwxxm="http://icao.int/iwxxm/1.1" xmlns:iwxxm-us="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release" xmlns:om="http://www.opengis.net/om/2.0" xmlns:saf="http://icao.int/saf/1.1" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release/schemas/usMetarSpeci.xsd ../../schemas/usMetarSpeci.xsd">
+  <iwxxm:observation>
+    <om:OM_Observation gml:id="obs-KALB-20150720T225100Z">
+      <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeterologicalAerodromeObservation"/>
+      <om:phenomenonTime>
+        <gml:TimeInstant gml:id="metar-KALB-201507202251Z">
+          <gml:timePosition>2015-07-20T22:51:00Z</gml:timePosition>
+        </gml:TimeInstant>
+      </om:phenomenonTime>
+      <om:resultTime xlink:href="#metar-KALB-201507202251Z"/>
+      <om:procedure xlink:href="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release/FMH1-METAR-SPECI.xml"/>
+      <om:observedProperty xlink:href="http://www.ofcm.gov/fmh-1/fmh1.htm"
+                           xlink:title="Federal Meteorological Handbook No.1 - Surface Weather Observations and Reports"/>
+      <om:featureOfInterest>
+        <sams:SF_SpatialSamplingFeature gml:id="samplePt-KALB">
+          <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint" xlink:title="SF_SamplingPoint"/>
+          <sf:sampledFeature>
+            <saf:Aerodrome gml:id="uuid.a6d5c974-5b11-4101-9199-a709dbd0f798">
+              <gml:identifier codeSpace="urn:uuid:">a6d5c974-5b11-4101-9199-a709dbd0f798</gml:identifier>
+              <saf:designator>KALB</saf:designator>
+              <saf:name>ALBANY COUNTY AR, NY</saf:name>
+              <saf:locationIndicatorICAO>KALB</saf:locationIndicatorICAO>
+              <saf:ARP>
+                <gml:Point axisLabels="Lat Lon Altitude" gml:id="reference-Pt-KALB" srsName="urn:ogc:def:crs:EPSG::4979" uomLabels="deg deg m">
+                  <gml:pos>42.76 -73.80 89</gml:pos>
+                </gml:Point>
+              </saf:ARP>
+            </saf:Aerodrome>
+          </sf:sampledFeature>
+          <sams:shape xlink:href="#reference-Pt-KALB"/>
+        </sams:SF_SpatialSamplingFeature>
+      </om:featureOfInterest>
+      <om:result>
+        <iwxxm-us:MeteorologicalAerodromeObservationRecord cloudAndVisibilityOK="false" gml:id="KALB-maor">
+          <iwxxm:airTemperature uom="Cel">6.1</iwxxm:airTemperature>
+          <iwxxm:dewpointTemperature uom="Cel">-6.1</iwxxm:dewpointTemperature>
+          <iwxxm:qnh uom="hPa">1020.2</iwxxm:qnh>
+          <iwxxm:surfaceWind>
+            <iwxxm:AerodromeSurfaceWind variableDirection="false">
+              <iwxxm:meanWindDirection uom="deg">160</iwxxm:meanWindDirection>
+              <iwxxm:meanWindSpeed uom="m/s">2.1</iwxxm:meanWindSpeed>
+            </iwxxm:AerodromeSurfaceWind>
+          </iwxxm:surfaceWind>
+          <iwxxm:visibility>
+            <iwxxm:AerodromeHorizontalVisibility>
+              <iwxxm:prevailingVisibility uom="m">16093.4</iwxxm:prevailingVisibility>
+            </iwxxm:AerodromeHorizontalVisibility>
+          </iwxxm:visibility>
+          <iwxxm:cloud>
+            <iwxxm:AerodromeObservedClouds>
+              <iwxxm:layer>
+                <iwxxm:CloudLayer>
+                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/4" xlink:title="Overcast"/>
+                  <iwxxm:base uom="ft">5000</iwxxm:base>
+                </iwxxm:CloudLayer>
+              </iwxxm:layer>
+            </iwxxm:AerodromeObservedClouds>
+          </iwxxm:cloud>
+          <iwxxm-us:humanReadableText>PRESENT WX VCSH VIRGA OHD</iwxxm-us:humanReadableText>
+          <iwxxm-us:seaLevelPressure uom="hPa">1020.4</iwxxm-us:seaLevelPressure>
+        </iwxxm-us:MeteorologicalAerodromeObservationRecord>
+      </om:result>
+    </om:OM_Observation>
+  </iwxxm:observation>
+  <iwxxm-us:observingSystemType xlink:href="http://nws.weather.gov/codes/FMH-1/2005/ObservingSystemType/AUTOMATED_WITH_PRESENT_WEATHER"/>
+</iwxxm-us:METAR>
+

@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+<iwxxm-us:SIGMET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release/schemas/usSigmet.xsd"
+ xmlns:iwxxm="http://icao.int/iwxxm/1.1"
+ xmlns:iwxxm-us="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release"
+ xmlns:om="http://www.opengis.net/om/2.0" xmlns:saf="http://icao.int/saf/1.1"
+ xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2"
+ xmlns:metce="http://def.wmo.int/metce/2013" gml:id="ts-sigmet-46e-KKCI-201411241555Z"
+ status="NORMAL">
+  <!-- 
+CONVECTIVE SIGMET 46E
+VALID UNTIL 1755Z
+FL GA AND FL AL CSTL WTRS
+FROM 40E PZD-80SSW TLH-150SE LEV
+LINE SEV EMBD TS 30 NM WIDE MOV FROM 27025KT. TOPS TO FL450.
+HAIL TO 1 IN...WIND GUSTS TO 50KT POSS.
+REF INTL SIGMET ECHO SERIES.
+ -->
+  <iwxxm:issuingAirTrafficServicesUnit>
+    <saf:Unit gml:id="uuid.72216652-5e58-4bd8-bf2f-dc15c516aabd">
+      <gml:identifier codeSpace="urn:uuid:">72216652-5e58-4bd8-bf2f-dc15c516aabd</gml:identifier>
+      <saf:name>Jacksonville</saf:name>
+      <saf:designator>ZJX</saf:designator>
+    </saf:Unit>
+  </iwxxm:issuingAirTrafficServicesUnit>
+  <iwxxm:originatingMeteorologicalWatchOffice>
+    <saf:Unit gml:id="uuid.0820d541-c711-5efd-a557-ce3f1062f1d6">
+      <gml:identifier codeSpace="urn:uuid:">0820d541-c711-5efd-a557-ce3f1062f1d6</gml:identifier>
+      <saf:name>US NATIONAL WEATHER SERVICE - AVIATION WEATHER CENTER</saf:name>
+      <saf:designator>KKCI</saf:designator>
+    </saf:Unit>    
+  </iwxxm:originatingMeteorologicalWatchOffice>
+  <iwxxm:sequenceNumber>46E</iwxxm:sequenceNumber>
+  <iwxxm:validPeriod>
+    <gml:TimePeriod gml:id="tp-24T15Z-24T17Z">
+      <gml:beginPosition>2014-11-24T15:55:00Z</gml:beginPosition>
+      <gml:endPosition>2014-11-24T17:55:00Z</gml:endPosition>
+    </gml:TimePeriod>
+  </iwxxm:validPeriod>
+  <iwxxm:phenomenon xlink:href="http://nws.weather.gov/codes/NWSI10-811/2011/USAeronauticalSignificantWeatherPhenomenon/CONVECTIVE_SIGMET/" xlink:title="Convective SIGMET"/>
+  <iwxxm:analysis>
+    <om:OM_Observation gml:id="ts-position-and-motion-46e-KKCI-201411241555Z">
+      <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/SIGMETEvolvingConditionAnalysis"/>
+      <om:phenomenonTime>
+        <gml:TimeInstant gml:id="ti-24T15Z">
+          <gml:timePosition>2014-11-24T15:55:00Z</gml:timePosition>
+        </gml:TimeInstant>
+      </om:phenomenonTime>
+      <om:resultTime xlink:href="#ti-24T15Z"/>
+      <om:validTime xlink:href="#tp-24T15Z-24T17Z"/>
+      <om:procedure>
+        <metce:Process gml:id="process-NWSI10-811">
+          <gml:description>National Weather Service Instruction 10-811 En-Route Forecasts and Advisories Significant Meteorological Information (SIGMET)
+          </gml:description>
+        </metce:Process>
+      </om:procedure>
+      <om:observedProperty xlink:href="http://nws.weather.gov/codes/NWSI10-811/2011/USAeronauticalSignificantWeatherPhenomenon/CONVECTIVE_SIGMET/" xlink:title="Convective SIGMET"/>
+      <om:featureOfInterest/>
+      <om:result>
+        <iwxxm:EvolvingMeteorologicalCondition intensityChange="NO_CHANGE" gml:id="emc-ts-obs-46e-KKCI-201411241555Z">
+          <iwxxm:directionOfMotion uom="deg">90</iwxxm:directionOfMotion>
+          <iwxxm:geometry>
+            <saf:AirspaceVolume gml:id="av-ts-obs-position-46e-KKCI-201411241555Z">
+              <saf:horizontalProjection>
+                <gml:Polygon axisLabels="Lat Lon" gml:id="polygon-ts-obs-position-46e-KKCI-201411241555Z" srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326" uomLabels="deg deg">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList count="7">
+                        31.54 -83.25 29.16 -84.74 27.20 -87.95 27.60 -88.28 29.50 -85.17 31.78 -83.77 31.54 -83.25
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </saf:horizontalProjection>
+            </saf:AirspaceVolume>
+          </iwxxm:geometry>
+          <iwxxm:speedOfMotion uom="kt">25</iwxxm:speedOfMotion>
+        </iwxxm:EvolvingMeteorologicalCondition>
+        <iwxxm-us:ConvectionByProducts>
+          <iwxxm-us:maximumWindGust uom="kt">50</iwxxm-us:maximumWindGust>
+          <iwxxm-us:maxHailstoneDiameter uom="in">1</iwxxm-us:maxHailstoneDiameter>
+        </iwxxm-us:ConvectionByProducts>
+        <iwxxm-us:ConvectionHeightForecast>
+          <iwxxm-us:convectionHeightValue uom="ft">45000</iwxxm-us:convectionHeightValue>
+          <iwxxm-us:aboveBelowIndicator xlink:href="http://nws.weather.gov/codes/NWSI10-811/2011/ConvectionTopIndicator/TOPS_TO"/>
+        </iwxxm-us:ConvectionHeightForecast>
+      </om:result>
+    </om:OM_Observation>
+  </iwxxm:analysis>
+  <iwxxm-us:convectionGeometry xlink:href="http://nws.weather.gov/codes/NWSI10-811/2011/SIGMETConvectionGeometry/LINE_OF_THUNDERSTORMS/" xlink:title="LINE_OF_THUNDERSTORMS"/>
+  <iwxxm-us:isSpecialIssuance>false</iwxxm-us:isSpecialIssuance>
+  <iwxxm-us:isCorrection>false</iwxxm-us:isCorrection>
+</iwxxm-us:SIGMET>

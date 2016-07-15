@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<iwxxm-us:SPECI automatedStation="false" gml:id="SPECI-KMKG-201507211915Z" status="NORMAL" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:iwxxm="http://icao.int/iwxxm/1.1" xmlns:iwxxm-us="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release" xmlns:om="http://www.opengis.net/om/2.0" xmlns:saf="http://icao.int/saf/1.1" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release/schemas/usMetarSpeci.xsd ../../schemas/usMetarSpeci.xsd">
+  <iwxxm:observation>
+    <om:OM_Observation gml:id="obs-KMKG-20150721T191500Z">
+      <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeterologicalAerodromeObservation"/>
+      <om:phenomenonTime>
+        <gml:TimeInstant gml:id="speci-KMKG-201507211915Z">
+          <gml:timePosition>2015-07-21T19:15:00Z</gml:timePosition>
+        </gml:TimeInstant>
+      </om:phenomenonTime>
+      <om:resultTime xlink:href="#speci-KMKG-201507211915Z"/>
+      <om:procedure xlink:href="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release/FMH1-METAR-SPECI.xml"/>
+      <om:observedProperty xlink:href="http://www.ofcm.gov/fmh-1/fmh1.htm"
+                           xlink:title="Federal Meteorological Handbook No.1 - Surface Weather Observations and Reports"/>
+      <om:featureOfInterest>
+        <sams:SF_SpatialSamplingFeature gml:id="samplePt-KMKG">
+          <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint" xlink:title="SF_SamplingPoint"/>
+          <sf:sampledFeature>
+            <saf:Aerodrome gml:id="uuid.02a8a3c8-6bec-4937-9c04-10422f7b717c">
+              <gml:identifier codeSpace="urn:uuid:">02a8a3c8-6bec-4937-9c04-10422f7b717c</gml:identifier>
+              <saf:designator>KMKG</saf:designator>
+              <saf:name>MUSKEGON COUNTY, MI</saf:name>
+              <saf:locationIndicatorICAO>KMKG</saf:locationIndicatorICAO>
+              <saf:ARP>
+                <gml:Point axisLabels="Lat Lon Altitude" gml:id="reference-Pt-KMKG" srsName="urn:ogc:def:crs:EPSG::4979" uomLabels="deg deg m">
+                  <gml:pos>43.18 -86.27 193</gml:pos>
+                </gml:Point>
+              </saf:ARP>
+            </saf:Aerodrome>
+          </sf:sampledFeature>
+          <sams:shape xlink:href="#reference-Pt-KMKG"/>
+        </sams:SF_SpatialSamplingFeature>
+      </om:featureOfInterest>
+      <om:result>
+        <iwxxm-us:MeteorologicalAerodromeObservationRecord cloudAndVisibilityOK="false" gml:id="KMKG-maor">
+          <iwxxm:airTemperature uom="Cel">-2.8</iwxxm:airTemperature>
+          <iwxxm:dewpointTemperature uom="Cel">-7.8</iwxxm:dewpointTemperature>
+          <iwxxm:qnh uom="hPa">998.2</iwxxm:qnh>
+          <iwxxm:surfaceWind>
+            <iwxxm:AerodromeSurfaceWind variableDirection="false">
+              <iwxxm:meanWindDirection uom="deg">240</iwxxm:meanWindDirection>
+              <iwxxm:meanWindSpeed uom="m/s">13.9</iwxxm:meanWindSpeed>
+              <iwxxm:windGust uom="m/s">18.5</iwxxm:windGust>
+            </iwxxm:AerodromeSurfaceWind>
+          </iwxxm:surfaceWind>
+          <iwxxm:visibility>
+            <iwxxm:AerodromeHorizontalVisibility>
+              <iwxxm:prevailingVisibility uom="m">4828.0</iwxxm:prevailingVisibility>
+            </iwxxm:AerodromeHorizontalVisibility>
+          </iwxxm:visibility>
+          <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/-SN" xlink:title="Light precipitation of snow"/>
+          <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/BLSN" xlink:title="Blowing snow"/>
+          <iwxxm:cloud>
+            <iwxxm:AerodromeObservedClouds>
+              <iwxxm:layer>
+                <iwxxm:CloudLayer>
+                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/4" xlink:title="Overcast"/>
+                  <iwxxm:base uom="ft">2300</iwxxm:base>
+                </iwxxm:CloudLayer>
+              </iwxxm:layer>
+            </iwxxm:AerodromeObservedClouds>
+          </iwxxm:cloud>
+          <iwxxm-us:maintenanceIndicator>true</iwxxm-us:maintenanceIndicator>
+          <iwxxm-us:statisticallyProcessedQuantity>
+            <iwxxm-us:extremeValuePeriod unit="hour">1</iwxxm-us:extremeValuePeriod>
+            <iwxxm-us:extremeValueType xlink:href="http://codes.wmo.int/grib2/codeflag/4.10/1" xlink:title="Accumulation"/>
+            <iwxxm-us:processedValue uom="kg/(s-m^2)">0.00e+00</iwxxm-us:processedValue>
+            <iwxxm-us:processedWeatherElement xlink:href="http://nws.weather.gov/codes/FMH-1/2005/StatisticallyProcessedWeatherElements/PrecipitationRate/"/>
+          </iwxxm-us:statisticallyProcessedQuantity>
+          <iwxxm-us:observedPropertyAtSecondLocation>
+            <iwxxm-us:location gml:id="vis2ndloc">
+              <saf:designator>RWY 14</saf:designator>
+            </iwxxm-us:location>
+            <iwxxm-us:visibility uom="m">2011.7</iwxxm-us:visibility>
+            <iwxxm-us:visibilityBelowSensorMinimum>false</iwxxm-us:visibilityBelowSensorMinimum>
+          </iwxxm-us:observedPropertyAtSecondLocation>
+          <iwxxm-us:variationsInObservedProperties>
+            <iwxxm-us:aerodromePeakWind>
+              <iwxxm-us:peakWindDirection uom="deg">220</iwxxm-us:peakWindDirection>
+              <iwxxm-us:peakWindSpeed uom="m/s">19.5</iwxxm-us:peakWindSpeed>
+              <iwxxm-us:timeOfPeakWind gml:id="peakWind-1858Z">
+                <gml:timePosition>2015-07-21T18:58:00Z</gml:timePosition>
+              </iwxxm-us:timeOfPeakWind>
+            </iwxxm-us:aerodromePeakWind>
+          </iwxxm-us:variationsInObservedProperties>
+        </iwxxm-us:MeteorologicalAerodromeObservationRecord>
+      </om:result>
+    </om:OM_Observation>
+  </iwxxm:observation>
+  <iwxxm-us:observingSystemType xlink:href="http://nws.weather.gov/codes/FMH-1/2005/ObservingSystemType/AUTOMATED_WITH_PRESENT_WEATHER"/>
+</iwxxm-us:SPECI>
+

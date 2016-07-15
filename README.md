@@ -7,4 +7,4 @@ Setup Project:
         creare-avxml-maven-artifact.bat
         creare-jweather-maven-artifact.bat
     2) Run WXXMConversionApplication main method.
-    2) Enjoy Project!
+    3) Enjoy Project!

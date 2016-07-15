@@ -41,6 +41,7 @@ import static com.weather.converter.util.common.MeteorologicalNamespaces.*;
 public class SIGMETConverter extends TACConverter {
 
 
+    String issuingAirTrafficServicesUnit;
     private boolean sigmetParsed = false;
     private SIGMETDocument sigmetDocument;
     private String tacType = "SIGMET";
@@ -89,7 +90,7 @@ public class SIGMETConverter extends TACConverter {
             if (meteorologicalPositionCollections != null && meteorologicalPositionCollections.length == 0) {
                 calculateMeteorologicalPositionCollectionsXml(omObservation.getResult());
             } else if (meteorologicalPositionCollections != null && meteorologicalPositionCollections.length != 0) {
-                if (sigmetDocument instanceof TropicalCycloneSIGMETDocumentImpl){
+                if (sigmetDocument instanceof TropicalCycloneSIGMETDocumentImpl) {
                     tacResult.append("TC ");
                 }
                 MeteorologicalPositionCollectionTypeImpl meteorologicalPositionCollection = (MeteorologicalPositionCollectionTypeImpl) meteorologicalPositionCollections[0];
@@ -406,8 +407,6 @@ public class SIGMETConverter extends TACConverter {
     private void setDateTimeOfIssue() {
 
     }
-
-    String issuingAirTrafficServicesUnit;
 
     private void setIssuingOffice() {
         //issuingAirTrafficServicesUnit

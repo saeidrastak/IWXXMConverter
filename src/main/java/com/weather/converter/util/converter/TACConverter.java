@@ -17,7 +17,7 @@ public abstract class TACConverter {
     int LINE_WORD_COUNT = 87;
     StringBuilder tacResult = new StringBuilder();
 
-    public void initTAC(String path) throws IOException, XmlException{
+    public void initTAC(String path) throws IOException, XmlException {
         parseXmlDocument(path);
         resetTACResult();
         initTAC();
@@ -29,13 +29,15 @@ public abstract class TACConverter {
 
 
     public abstract void parseXmlDocument(String path) throws IOException, XmlException;
+
     public abstract void initTAC() throws IOException, XmlException;
+
     public abstract String buildTAC();
 
     public String buildTACFile(String pathToSave, boolean replace) throws IOException {
         File resultTACFile = new File(pathToSave);
         String result = buildTAC();
-        if (resultTACFile.exists() && !replace){
+        if (resultTACFile.exists() && !replace) {
             return result;
         }
         FileUtils.writeStringToFile(resultTACFile, result);

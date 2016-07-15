@@ -1,219 +1,245 @@
 <?xml version='1.0' encoding='utf-8'?>
-<iwxxm-us:TAF gml:id="TAF-KGSO-201509030539Z" status="NORMAL" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:iwxxm="http://icao.int/iwxxm/1.1" xmlns:iwxxm-us="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release" xmlns:metce="http://def.wmo.int/metce/2013" xmlns:om="http://www.opengis.net/om/2.0" xmlns:saf="http://icao.int/saf/1.1" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nws.weather.gov/schemas/1.0/Release/schemas/usTaf.xsd ../../schemas/usTaf.xsd">
-  <iwxxm:issueTime>
-    <gml:TimeInstant gml:id="ti-KGSO-201509030539Z">
-      <gml:timePosition>2015-09-03T05:39:00Z</gml:timePosition>
-    </gml:TimeInstant>
-  </iwxxm:issueTime>
-  <iwxxm:validTime>
-    <gml:TimePeriod gml:id="Entire-timePeriod-KGSO-201509030600Z-201509040600Z">
-      <gml:beginPosition>2015-09-03T06:00:00Z</gml:beginPosition>
-      <gml:endPosition>2015-09-04T06:00:00Z</gml:endPosition>
-    </gml:TimePeriod>
-  </iwxxm:validTime>
-  <!--
-	The TAC form of the Terminal Aerodrome Forecast appears here only for testing and evaluation purposes and
-        to illustrate the mapping of the forecast between one format to the other. The TAC form should not appear
-        in an operational environment.
+<iwxxm-us:TAF xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:iwxxm="http://icao.int/iwxxm/1.1"
+              xmlns:iwxxm-us="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release"
+              xmlns:metce="http://def.wmo.int/metce/2013"
+              xmlns:om="http://www.opengis.net/om/2.0"
+              xmlns:saf="http://icao.int/saf/1.1" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+              xmlns:sf="http://www.opengis.net/sampling/2.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+              gml:id="TAF-KGSO-201509030539Z"
+              status="NORMAL"
+        >
+    <iwxxm:issueTime>
+        <gml:TimeInstant gml:id="ti-KGSO-201509030539Z">
+            <gml:timePosition>2015-09-03T05:39:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </iwxxm:issueTime>
+    <iwxxm:validTime>
+        <gml:TimePeriod gml:id="Entire-timePeriod-KGSO-201509030600Z-201509040600Z">
+            <gml:beginPosition>2015-09-03T06:00:00Z</gml:beginPosition>
+            <gml:endPosition>2015-09-04T06:00:00Z</gml:endPosition>
+        </gml:TimePeriod>
+    </iwxxm:validTime>
+    <!--
+      The TAC form of the Terminal Aerodrome Forecast appears here only for testing and evaluation purposes and
+          to illustrate the mapping of the forecast between one format to the other. The TAC form should not appear
+          in an operational environment.
 
-        TAF KGSO 030539Z 0306/0406 19004KT P6SM SCT050 BKN250
-     FM030800 20005KT 2SM BR BKN004 WS007/23045KT
-     FM031400 29012G18KT 2SM -RA BR OVC003
-     FM031800 36010KT P6SM BKN020=
--->
-  <iwxxm:baseForecast>
-    <om:OM_Observation gml:id="KGSO-base-forecast">
-      <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeBaseForecast"/>
-      <om:phenomenonTime>
-        <gml:TimePeriod gml:id="Base-timePeriod-KGSO-201509030539Z-201509030800Z">
-          <gml:beginPosition>2015-09-03T05:39:00Z</gml:beginPosition>
-          <gml:endPosition>2015-09-03T08:00:00Z</gml:endPosition>
-        </gml:TimePeriod>
-      </om:phenomenonTime>
-      <om:resultTime xlink:href="#ti-KGSO-201509030539Z"/>
-      <om:validTime xlink:href="#Entire-timePeriod-KGSO-201509030600Z-201509040600Z"/>
-      <om:procedure>
-        <metce:Process gml:id="process-NWSI10-813">
-          <gml:description>United States National Weather Service Instruction 10-813 Terminal Aerodrome Forecasts</gml:description>
-        </metce:Process>
-      </om:procedure>
-      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observables-property/MeteorologicalAerodromeForecast"/>
-      <om:featureOfInterest>
-        <sams:SF_SpatialSamplingFeature gml:id="samplePt-KGSO">
-          <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
-          <sf:sampledFeature>
-            <saf:Aerodrome gml:id="uuid.cf0860ba-946b-419b-8250-8078dbec8723">
-              <gml:identifier codeSpace="urn:uuid:">cf0860ba-946b-419b-8250-8078dbec8723</gml:identifier>
-              <saf:designator>KGSO</saf:designator>
-              <saf:name>GREENSBORO/HI PT, NC</saf:name>
-              <saf:locationIndicatorICAO>KGSO</saf:locationIndicatorICAO>
-              <saf:ARP>
-                <gml:Point axisLabels="Lat Lon Altitude" gml:id="reference-Pt-KGSO" srsName="urn:ogc:def:crs:EPSG::4979" uomLabels="deg deg m">
-                  <gml:pos>36.01 -79.95 275</gml:pos>
-                </gml:Point>
-              </saf:ARP>
-            </saf:Aerodrome>
-          </sf:sampledFeature>
-          <sams:shape>
-            <gml:Point axisLabels="Lat Lon Altitude" gml:id="observed-Pt-KGSO" srsName="urn:ogc:crs:EPSG::4979" uomLabels="deg deg m">
-              <gml:pos>36.01 -79.95 275</gml:pos>
-            </gml:Point>
-          </sams:shape>
-        </sams:SF_SpatialSamplingFeature>
-      </om:featureOfInterest>
-      <om:result>
-        <iwxxm-us:MeteorologicalAerodromeForecastRecord cloudAndVisibilityOK="false" gml:id="KGSO-mafr-0">
-          <iwxxm:prevailingVisibility uom="m">11265.4</iwxxm:prevailingVisibility>
-          <iwxxm:prevailingVisibilityOperator>ABOVE</iwxxm:prevailingVisibilityOperator>
-          <iwxxm:surfaceWind>
-            <iwxxm:AerodromeSurfaceWindForecast variableWindDirection="false">
-              <iwxxm:meanWindDirection uom="deg">190</iwxxm:meanWindDirection>
-              <iwxxm:meanWindSpeed uom="m/s">2.1</iwxxm:meanWindSpeed>
-            </iwxxm:AerodromeSurfaceWindForecast>
-          </iwxxm:surfaceWind>
-          <iwxxm:cloud>
-            <iwxxm:AerodromeCloudForecast gml:id="KGSO-acf-1">
-              <iwxxm:layer>
-                <iwxxm:CloudLayer>
-                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/2" xlink:title="Scattered"/>
-                  <iwxxm:base uom="ft">5000</iwxxm:base>
-                </iwxxm:CloudLayer>
-              </iwxxm:layer>
-              <iwxxm:layer>
-                <iwxxm:CloudLayer>
-                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3" xlink:title="Broken"/>
-                  <iwxxm:base uom="ft">25000</iwxxm:base>
-                </iwxxm:CloudLayer>
-              </iwxxm:layer>
-            </iwxxm:AerodromeCloudForecast>
-          </iwxxm:cloud>
-        </iwxxm-us:MeteorologicalAerodromeForecastRecord>
-      </om:result>
-    </om:OM_Observation>
-  </iwxxm:baseForecast>
-  <iwxxm:changeForecast>
-    <om:OM_Observation gml:id="KGSO-chg-1">
-      <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeForecast"/>
-      <om:phenomenonTime>
-        <gml:TimePeriod gml:id="FM-timePeriod-KGSO-201509030800Z-201509031400Z">
-          <gml:beginPosition>2015-09-03T08:00:00Z</gml:beginPosition>
-          <gml:endPosition>2015-09-03T14:00:00Z</gml:endPosition>
-        </gml:TimePeriod>
-      </om:phenomenonTime>
-      <om:resultTime xlink:href="#ti-KGSO-201509030539Z"/>
-      <om:validTime xlink:href="#Entire-timePeriod-KGSO-201509030600Z-201509040600Z"/>
-      <om:procedure xlink:href="#process-NWSI10-813"/>
-      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observables-property/MeteorologicalAerodromeForecast"/>
-      <om:featureOfInterest xlink:href="#samplePt-KGSO"/>
-      <om:result>
-        <iwxxm-us:MeteorologicalAerodromeForecastRecord changeIndicator="FROM" cloudAndVisibilityOK="false" gml:id="KGSO-cf-1">
-          <iwxxm:prevailingVisibility uom="m">3218.7</iwxxm:prevailingVisibility>
-          <iwxxm:surfaceWind>
-            <iwxxm:AerodromeSurfaceWindForecast variableWindDirection="false">
-              <iwxxm:meanWindDirection uom="deg">200</iwxxm:meanWindDirection>
-              <iwxxm:meanWindSpeed uom="m/s">2.6</iwxxm:meanWindSpeed>
-            </iwxxm:AerodromeSurfaceWindForecast>
-          </iwxxm:surfaceWind>
-          <iwxxm:weather xlink:href="http://codes.wmo.int/306/4678/BR" xlink:title="Mist"/>
-          <iwxxm:cloud>
-            <iwxxm:AerodromeCloudForecast gml:id="KGSO-acf-2">
-              <iwxxm:layer>
-                <iwxxm:CloudLayer>
-                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3" xlink:title="Broken"/>
-                  <iwxxm:base uom="ft">400</iwxxm:base>
-                </iwxxm:CloudLayer>
-              </iwxxm:layer>
-            </iwxxm:AerodromeCloudForecast>
-          </iwxxm:cloud>
-          <iwxxm-us:NonConvectiveLowLevelWindShear>
-            <iwxxm-us:lowLevelWindShearWindDirection uom="deg">230</iwxxm-us:lowLevelWindShearWindDirection>
-            <iwxxm-us:lowLevelWindShearWindSpeed uom="m/s">23.1</iwxxm-us:lowLevelWindShearWindSpeed>
-            <iwxxm-us:LayerAboveAerodrome>
-              <iwxxm-us:upperLimit uom="m">213.4</iwxxm-us:upperLimit>
-              <iwxxm-us:lowerLimit uom="m">0.0</iwxxm-us:lowerLimit>
-            </iwxxm-us:LayerAboveAerodrome>
-          </iwxxm-us:NonConvectiveLowLevelWindShear>
-        </iwxxm-us:MeteorologicalAerodromeForecastRecord>
-      </om:result>
-    </om:OM_Observation>
-  </iwxxm:changeForecast>
-  <iwxxm:changeForecast>
-    <om:OM_Observation gml:id="KGSO-chg-2">
-      <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeForecast"/>
-      <om:phenomenonTime>
-        <gml:TimePeriod gml:id="FM-timePeriod-KGSO-201509031400Z-201509031800Z">
-          <gml:beginPosition>2015-09-03T14:00:00Z</gml:beginPosition>
-          <gml:endPosition>2015-09-03T18:00:00Z</gml:endPosition>
-        </gml:TimePeriod>
-      </om:phenomenonTime>
-      <om:resultTime xlink:href="#ti-KGSO-201509030539Z"/>
-      <om:validTime xlink:href="#Entire-timePeriod-KGSO-201509030600Z-201509040600Z"/>
-      <om:procedure xlink:href="#process-NWSI10-813"/>
-      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observables-property/MeteorologicalAerodromeForecast"/>
-      <om:featureOfInterest xlink:href="#samplePt-KGSO"/>
-      <om:result>
-        <iwxxm-us:MeteorologicalAerodromeForecastRecord changeIndicator="FROM" cloudAndVisibilityOK="false" gml:id="KGSO-cf-2">
-          <iwxxm:prevailingVisibility uom="m">3218.7</iwxxm:prevailingVisibility>
-          <iwxxm:surfaceWind>
-            <iwxxm:AerodromeSurfaceWindForecast variableWindDirection="false">
-              <iwxxm:meanWindDirection uom="deg">290</iwxxm:meanWindDirection>
-              <iwxxm:meanWindSpeed uom="m/s">6.2</iwxxm:meanWindSpeed>
-              <iwxxm:windGustSpeed uom="m/s">9.3</iwxxm:windGustSpeed>
-            </iwxxm:AerodromeSurfaceWindForecast>
-          </iwxxm:surfaceWind>
-          <iwxxm:weather xlink:href="http://codes.wmo.int/306/4678/-RA" xlink:title="Light precipitation of rain"/>
-          <iwxxm:weather xlink:href="http://codes.wmo.int/306/4678/BR" xlink:title="Mist"/>
-          <iwxxm:cloud>
-            <iwxxm:AerodromeCloudForecast gml:id="KGSO-acf-3">
-              <iwxxm:layer>
-                <iwxxm:CloudLayer>
-                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/4" xlink:title="Overcast"/>
-                  <iwxxm:base uom="ft">300</iwxxm:base>
-                </iwxxm:CloudLayer>
-              </iwxxm:layer>
-            </iwxxm:AerodromeCloudForecast>
-          </iwxxm:cloud>
-        </iwxxm-us:MeteorologicalAerodromeForecastRecord>
-      </om:result>
-    </om:OM_Observation>
-  </iwxxm:changeForecast>
-  <iwxxm:changeForecast>
-    <om:OM_Observation gml:id="KGSO-chg-3">
-      <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeForecast"/>
-      <om:phenomenonTime>
-        <gml:TimePeriod gml:id="FM-timePeriod-KGSO-201509031800Z-201509040600Z">
-          <gml:beginPosition>2015-09-03T18:00:00Z</gml:beginPosition>
-          <gml:endPosition>2015-09-04T06:00:00Z</gml:endPosition>
-        </gml:TimePeriod>
-      </om:phenomenonTime>
-      <om:resultTime xlink:href="#ti-KGSO-201509030539Z"/>
-      <om:validTime xlink:href="#Entire-timePeriod-KGSO-201509030600Z-201509040600Z"/>
-      <om:procedure xlink:href="#process-NWSI10-813"/>
-      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observables-property/MeteorologicalAerodromeForecast"/>
-      <om:featureOfInterest xlink:href="#samplePt-KGSO"/>
-      <om:result>
-        <iwxxm-us:MeteorologicalAerodromeForecastRecord changeIndicator="FROM" cloudAndVisibilityOK="false" gml:id="KGSO-cf-3">
-          <iwxxm:prevailingVisibility uom="m">11265.4</iwxxm:prevailingVisibility>
-          <iwxxm:prevailingVisibilityOperator>ABOVE</iwxxm:prevailingVisibilityOperator>
-          <iwxxm:surfaceWind>
-            <iwxxm:AerodromeSurfaceWindForecast variableWindDirection="false">
-              <iwxxm:meanWindDirection uom="deg">360</iwxxm:meanWindDirection>
-              <iwxxm:meanWindSpeed uom="m/s">5.1</iwxxm:meanWindSpeed>
-            </iwxxm:AerodromeSurfaceWindForecast>
-          </iwxxm:surfaceWind>
-          <iwxxm:cloud>
-            <iwxxm:AerodromeCloudForecast gml:id="KGSO-acf-4">
-              <iwxxm:layer>
-                <iwxxm:CloudLayer>
-                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3" xlink:title="Broken"/>
-                  <iwxxm:base uom="ft">2000</iwxxm:base>
-                </iwxxm:CloudLayer>
-              </iwxxm:layer>
-            </iwxxm:AerodromeCloudForecast>
-          </iwxxm:cloud>
-        </iwxxm-us:MeteorologicalAerodromeForecastRecord>
-      </om:result>
-    </om:OM_Observation>
-  </iwxxm:changeForecast>
+          TAF KGSO 030539Z 0306/0406 19004KT P6SM SCT050 BKN250
+       FM030800 20005KT 2SM BR BKN004 WS007/23045KT
+       FM031400 29012G18KT 2SM -RA BR OVC003
+       FM031800 36010KT P6SM BKN020=
+  -->
+    <iwxxm:baseForecast>
+        <om:OM_Observation gml:id="KGSO-base-forecast">
+            <om:type
+                    xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeBaseForecast"/>
+            <om:phenomenonTime>
+                <gml:TimePeriod gml:id="Base-timePeriod-KGSO-201509030539Z-201509030800Z">
+                    <gml:beginPosition>2015-09-03T05:39:00Z</gml:beginPosition>
+                    <gml:endPosition>2015-09-03T08:00:00Z</gml:endPosition>
+                </gml:TimePeriod>
+            </om:phenomenonTime>
+            <om:resultTime xlink:href="#ti-KGSO-201509030539Z"/>
+            <om:validTime xlink:href="#Entire-timePeriod-KGSO-201509030600Z-201509040600Z"/>
+            <om:procedure>
+                <metce:Process gml:id="process-NWSI10-813">
+                    <gml:description>United States National Weather Service Instruction 10-813 Terminal Aerodrome
+                        Forecasts
+                    </gml:description>
+                </metce:Process>
+            </om:procedure>
+            <om:observedProperty
+                    xlink:href="http://codes.wmo.int/49-2/observables-property/MeteorologicalAerodromeForecast"/>
+            <om:featureOfInterest>
+                <sams:SF_SpatialSamplingFeature gml:id="samplePt-KGSO">
+                    <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
+                    <sf:sampledFeature>
+                        <saf:Aerodrome gml:id="uuid.cf0860ba-946b-419b-8250-8078dbec8723">
+                            <gml:identifier codeSpace="urn:uuid:">cf0860ba-946b-419b-8250-8078dbec8723</gml:identifier>
+                            <saf:designator>KGSO</saf:designator>
+                            <saf:name>GREENSBORO/HI PT, NC</saf:name>
+                            <saf:locationIndicatorICAO>KGSO</saf:locationIndicatorICAO>
+                            <saf:ARP>
+                                <gml:Point axisLabels="Lat Lon Altitude" gml:id="reference-Pt-KGSO"
+                                           srsName="urn:ogc:def:crs:EPSG::4979" uomLabels="deg deg m">
+                                    <gml:pos>36.01 -79.95 275</gml:pos>
+                                </gml:Point>
+                            </saf:ARP>
+                        </saf:Aerodrome>
+                    </sf:sampledFeature>
+                    <sams:shape>
+                        <gml:Point axisLabels="Lat Lon Altitude" gml:id="observed-Pt-KGSO"
+                                   srsName="urn:ogc:crs:EPSG::4979" uomLabels="deg deg m">
+                            <gml:pos>36.01 -79.95 275</gml:pos>
+                        </gml:Point>
+                    </sams:shape>
+                </sams:SF_SpatialSamplingFeature>
+            </om:featureOfInterest>
+            <om:result>
+                <iwxxm-us:MeteorologicalAerodromeForecastRecord cloudAndVisibilityOK="false" gml:id="KGSO-mafr-0">
+                    <iwxxm:prevailingVisibility uom="m">11265.4</iwxxm:prevailingVisibility>
+                    <iwxxm:prevailingVisibilityOperator>ABOVE</iwxxm:prevailingVisibilityOperator>
+                    <iwxxm:surfaceWind>
+                        <iwxxm:AerodromeSurfaceWindForecast variableWindDirection="false">
+                            <iwxxm:meanWindDirection uom="deg">190</iwxxm:meanWindDirection>
+                            <iwxxm:meanWindSpeed uom="m/s">2.1</iwxxm:meanWindSpeed>
+                        </iwxxm:AerodromeSurfaceWindForecast>
+                    </iwxxm:surfaceWind>
+                    <iwxxm:cloud>
+                        <iwxxm:AerodromeCloudForecast gml:id="KGSO-acf-1">
+                            <iwxxm:layer>
+                                <iwxxm:CloudLayer>
+                                    <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/2"
+                                                  xlink:title="Scattered"/>
+                                    <iwxxm:base uom="ft">5000</iwxxm:base>
+                                </iwxxm:CloudLayer>
+                            </iwxxm:layer>
+                            <iwxxm:layer>
+                                <iwxxm:CloudLayer>
+                                    <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3"
+                                                  xlink:title="Broken"/>
+                                    <iwxxm:base uom="ft">25000</iwxxm:base>
+                                </iwxxm:CloudLayer>
+                            </iwxxm:layer>
+                        </iwxxm:AerodromeCloudForecast>
+                    </iwxxm:cloud>
+                </iwxxm-us:MeteorologicalAerodromeForecastRecord>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:baseForecast>
+    <iwxxm:changeForecast>
+        <om:OM_Observation gml:id="KGSO-chg-1">
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeForecast"/>
+            <om:phenomenonTime>
+                <gml:TimePeriod gml:id="FM-timePeriod-KGSO-201509030800Z-201509031400Z">
+                    <gml:beginPosition>2015-09-03T08:00:00Z</gml:beginPosition>
+                    <gml:endPosition>2015-09-03T14:00:00Z</gml:endPosition>
+                </gml:TimePeriod>
+            </om:phenomenonTime>
+            <om:resultTime xlink:href="#ti-KGSO-201509030539Z"/>
+            <om:validTime xlink:href="#Entire-timePeriod-KGSO-201509030600Z-201509040600Z"/>
+            <om:procedure xlink:href="#process-NWSI10-813"/>
+            <om:observedProperty
+                    xlink:href="http://codes.wmo.int/49-2/observables-property/MeteorologicalAerodromeForecast"/>
+            <om:featureOfInterest xlink:href="#samplePt-KGSO"/>
+            <om:result>
+                <iwxxm-us:MeteorologicalAerodromeForecastRecord changeIndicator="FROM" cloudAndVisibilityOK="false"
+                                                                gml:id="KGSO-cf-1">
+                    <iwxxm:prevailingVisibility uom="m">3218.7</iwxxm:prevailingVisibility>
+                    <iwxxm:surfaceWind>
+                        <iwxxm:AerodromeSurfaceWindForecast variableWindDirection="false">
+                            <iwxxm:meanWindDirection uom="deg">200</iwxxm:meanWindDirection>
+                            <iwxxm:meanWindSpeed uom="m/s">2.6</iwxxm:meanWindSpeed>
+                        </iwxxm:AerodromeSurfaceWindForecast>
+                    </iwxxm:surfaceWind>
+                    <iwxxm:weather xlink:href="http://codes.wmo.int/306/4678/BR" xlink:title="Mist"/>
+                    <iwxxm:cloud>
+                        <iwxxm:AerodromeCloudForecast gml:id="KGSO-acf-2">
+                            <iwxxm:layer>
+                                <iwxxm:CloudLayer>
+                                    <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3"
+                                                  xlink:title="Broken"/>
+                                    <iwxxm:base uom="ft">400</iwxxm:base>
+                                </iwxxm:CloudLayer>
+                            </iwxxm:layer>
+                        </iwxxm:AerodromeCloudForecast>
+                    </iwxxm:cloud>
+                    <iwxxm-us:NonConvectiveLowLevelWindShear>
+                        <iwxxm-us:lowLevelWindShearWindDirection uom="deg">230</iwxxm-us:lowLevelWindShearWindDirection>
+                        <iwxxm-us:lowLevelWindShearWindSpeed uom="m/s">23.1</iwxxm-us:lowLevelWindShearWindSpeed>
+                        <iwxxm-us:LayerAboveAerodrome>
+                            <iwxxm-us:upperLimit uom="m">213.4</iwxxm-us:upperLimit>
+                            <iwxxm-us:lowerLimit uom="m">0.0</iwxxm-us:lowerLimit>
+                        </iwxxm-us:LayerAboveAerodrome>
+                    </iwxxm-us:NonConvectiveLowLevelWindShear>
+                </iwxxm-us:MeteorologicalAerodromeForecastRecord>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:changeForecast>
+    <iwxxm:changeForecast>
+        <om:OM_Observation gml:id="KGSO-chg-2">
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeForecast"/>
+            <om:phenomenonTime>
+                <gml:TimePeriod gml:id="FM-timePeriod-KGSO-201509031400Z-201509031800Z">
+                    <gml:beginPosition>2015-09-03T14:00:00Z</gml:beginPosition>
+                    <gml:endPosition>2015-09-03T18:00:00Z</gml:endPosition>
+                </gml:TimePeriod>
+            </om:phenomenonTime>
+            <om:resultTime xlink:href="#ti-KGSO-201509030539Z"/>
+            <om:validTime xlink:href="#Entire-timePeriod-KGSO-201509030600Z-201509040600Z"/>
+            <om:procedure xlink:href="#process-NWSI10-813"/>
+            <om:observedProperty
+                    xlink:href="http://codes.wmo.int/49-2/observables-property/MeteorologicalAerodromeForecast"/>
+            <om:featureOfInterest xlink:href="#samplePt-KGSO"/>
+            <om:result>
+                <iwxxm-us:MeteorologicalAerodromeForecastRecord changeIndicator="FROM" cloudAndVisibilityOK="false"
+                                                                gml:id="KGSO-cf-2">
+                    <iwxxm:prevailingVisibility uom="m">3218.7</iwxxm:prevailingVisibility>
+                    <iwxxm:surfaceWind>
+                        <iwxxm:AerodromeSurfaceWindForecast variableWindDirection="false">
+                            <iwxxm:meanWindDirection uom="deg">290</iwxxm:meanWindDirection>
+                            <iwxxm:meanWindSpeed uom="m/s">6.2</iwxxm:meanWindSpeed>
+                            <iwxxm:windGustSpeed uom="m/s">9.3</iwxxm:windGustSpeed>
+                        </iwxxm:AerodromeSurfaceWindForecast>
+                    </iwxxm:surfaceWind>
+                    <iwxxm:weather xlink:href="http://codes.wmo.int/306/4678/-RA"
+                                   xlink:title="Light precipitation of rain"/>
+                    <iwxxm:weather xlink:href="http://codes.wmo.int/306/4678/BR" xlink:title="Mist"/>
+                    <iwxxm:cloud>
+                        <iwxxm:AerodromeCloudForecast gml:id="KGSO-acf-3">
+                            <iwxxm:layer>
+                                <iwxxm:CloudLayer>
+                                    <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/4"
+                                                  xlink:title="Overcast"/>
+                                    <iwxxm:base uom="ft">300</iwxxm:base>
+                                </iwxxm:CloudLayer>
+                            </iwxxm:layer>
+                        </iwxxm:AerodromeCloudForecast>
+                    </iwxxm:cloud>
+                </iwxxm-us:MeteorologicalAerodromeForecastRecord>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:changeForecast>
+    <iwxxm:changeForecast>
+        <om:OM_Observation gml:id="KGSO-chg-3">
+            <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeForecast"/>
+            <om:phenomenonTime>
+                <gml:TimePeriod gml:id="FM-timePeriod-KGSO-201509031800Z-201509040600Z">
+                    <gml:beginPosition>2015-09-03T18:00:00Z</gml:beginPosition>
+                    <gml:endPosition>2015-09-04T06:00:00Z</gml:endPosition>
+                </gml:TimePeriod>
+            </om:phenomenonTime>
+            <om:resultTime xlink:href="#ti-KGSO-201509030539Z"/>
+            <om:validTime xlink:href="#Entire-timePeriod-KGSO-201509030600Z-201509040600Z"/>
+            <om:procedure xlink:href="#process-NWSI10-813"/>
+            <om:observedProperty
+                    xlink:href="http://codes.wmo.int/49-2/observables-property/MeteorologicalAerodromeForecast"/>
+            <om:featureOfInterest xlink:href="#samplePt-KGSO"/>
+            <om:result>
+                <iwxxm-us:MeteorologicalAerodromeForecastRecord changeIndicator="FROM" cloudAndVisibilityOK="false"
+                                                                gml:id="KGSO-cf-3">
+                    <iwxxm:prevailingVisibility uom="m">11265.4</iwxxm:prevailingVisibility>
+                    <iwxxm:prevailingVisibilityOperator>ABOVE</iwxxm:prevailingVisibilityOperator>
+                    <iwxxm:surfaceWind>
+                        <iwxxm:AerodromeSurfaceWindForecast variableWindDirection="false">
+                            <iwxxm:meanWindDirection uom="deg">360</iwxxm:meanWindDirection>
+                            <iwxxm:meanWindSpeed uom="m/s">5.1</iwxxm:meanWindSpeed>
+                        </iwxxm:AerodromeSurfaceWindForecast>
+                    </iwxxm:surfaceWind>
+                    <iwxxm:cloud>
+                        <iwxxm:AerodromeCloudForecast gml:id="KGSO-acf-4">
+                            <iwxxm:layer>
+                                <iwxxm:CloudLayer>
+                                    <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3"
+                                                  xlink:title="Broken"/>
+                                    <iwxxm:base uom="ft">2000</iwxxm:base>
+                                </iwxxm:CloudLayer>
+                            </iwxxm:layer>
+                        </iwxxm:AerodromeCloudForecast>
+                    </iwxxm:cloud>
+                </iwxxm-us:MeteorologicalAerodromeForecastRecord>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:changeForecast>
 </iwxxm-us:TAF>
 

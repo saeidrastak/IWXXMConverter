@@ -20,7 +20,7 @@ public class ApplicationUtils {
     public static Collection<File> readWXXMFiles(String dir, boolean RECURSIVE) {
         String[] extensions = new String[]{"xml"};
         File directory = new File(dir);
-        if (!directory.exists()){
+        if (!directory.exists()) {
             System.out.println("Source directory does not exists!");
             return new ArrayList<File>();
         }
@@ -30,6 +30,7 @@ public class ApplicationUtils {
     public static METARDocument parseAsMetarDocument(String XML_FILE_PATH) throws XmlException, IOException {
         return METARDocument.Factory.parse(new FileInputStream(XML_FILE_PATH));
     }
+
     public static TAFDocument parseAsTAFDocument(String XML_FILE_PATH) throws XmlException, IOException {
         return TAFDocument.Factory.parse(new FileInputStream(XML_FILE_PATH));
     }
@@ -42,17 +43,18 @@ public class ApplicationUtils {
         return SIGMETDocument.Factory.parse(new FileInputStream(XML_FILE_PATH));
     }
 
-    public static boolean isWindowsEnvironment(){
-        OSCheck.OSType ostype=OSCheck.getOperatingSystemType();
+    public static boolean isWindowsEnvironment() {
+        OSCheck.OSType ostype = OSCheck.getOperatingSystemType();
         return ostype.equals(OSCheck.OSType.Windows);
     }
-    public static boolean isLINUXEnvironment(){
-        OSCheck.OSType ostype=OSCheck.getOperatingSystemType();
+
+    public static boolean isLINUXEnvironment() {
+        OSCheck.OSType ostype = OSCheck.getOperatingSystemType();
         return ostype.equals(OSCheck.OSType.Linux);
     }
 
 
-    public static String getPathSeparator(){
-        return ApplicationUtils.isWindowsEnvironment() ? "\\":"/";
+    public static String getPathSeparator() {
+        return ApplicationUtils.isWindowsEnvironment() ? "\\" : "/";
     }
 }

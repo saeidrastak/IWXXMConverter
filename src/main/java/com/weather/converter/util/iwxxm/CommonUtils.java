@@ -15,17 +15,17 @@ import java.util.HashMap;
 public class CommonUtils {
     public static final String XML_SCHEMA_LOCATION = "http://schemas.wmo.int/iwxxm/1.0RC1 ./iwxxm.xsd http://schemas.wmo.int/metce/1.0RC1 ./metce.xsd";
 
-    public static final String NS_GML       = "http://www.opengis.net/gml/3.2";
+    public static final String NS_GML = "http://www.opengis.net/gml/3.2";
     public static final String NS_MET_BASIC = "http://data.wmo.int/def/met-basic/1.0RC1";
-    public static final String NS_OPM       = "http://data.wmo.int/def/opm/1.0RC1";
-    public static final String NS_METCE     = "http://data.wmo.int/def/metce/1.0RC1";
-    public static final String NS_SAF       = "http://icao.int/saf/1.0RC1";
-    public static final String NS_IWXXM     = "http://icao.int/iwxxm/1.0RC1";
-    public static final String NS_XS     	= "http://www.w3.org/2001/XMLSchema";
-    public static final String NS_SAMS     	= "http://www.opengis.net/samplingSpatial/2.0";
-    public static final String NS_SAM     	= "http://www.opengis.net/sampling/2.0";
+    public static final String NS_OPM = "http://data.wmo.int/def/opm/1.0RC1";
+    public static final String NS_METCE = "http://data.wmo.int/def/metce/1.0RC1";
+    public static final String NS_SAF = "http://icao.int/saf/1.0RC1";
+    public static final String NS_IWXXM = "http://icao.int/iwxxm/1.0RC1";
+    public static final String NS_XS = "http://www.w3.org/2001/XMLSchema";
+    public static final String NS_SAMS = "http://www.opengis.net/samplingSpatial/2.0";
+    public static final String NS_SAM = "http://www.opengis.net/sampling/2.0";
 
-    public static void writeXmlFile( XmlObject docObject, String targetFilePath){
+    public static void writeXmlFile(XmlObject docObject, String targetFilePath) {
 
         File xmlFile = new File(targetFilePath);
 
@@ -55,6 +55,7 @@ public class CommonUtils {
             e.printStackTrace();
         }
     }
+
     public static String convertToTwoDigit(int number) {
         if (number < 10) {
             return "0" + number;

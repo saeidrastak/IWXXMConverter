@@ -1,96 +1,115 @@
 <?xml version='1.0' encoding='utf-8'?>
-<iwxxm-us:METAR automatedStation="false" gml:id="METAR-KPTK-201507210253Z" status="NORMAL" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:iwxxm="http://icao.int/iwxxm/1.1" xmlns:iwxxm-us="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release" xmlns:om="http://www.opengis.net/om/2.0" xmlns:saf="http://icao.int/saf/1.1" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release/schemas/usMetarSpeci.xsd ../../schemas/usMetarSpeci.xsd">
-  <iwxxm:observation>
-    <om:OM_Observation gml:id="obs-KPTK-20150721T025300Z">
-      <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeterologicalAerodromeObservation"/>
-      <om:phenomenonTime>
-        <gml:TimeInstant gml:id="metar-KPTK-201507210253Z">
-          <gml:timePosition>2015-07-21T02:53:00Z</gml:timePosition>
-        </gml:TimeInstant>
-      </om:phenomenonTime>
-      <om:resultTime xlink:href="#metar-KPTK-201507210253Z"/>
-      <om:procedure xlink:href="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release/FMH1-METAR-SPECI.xml"/>
-      <om:observedProperty xlink:href="http://www.ofcm.gov/fmh-1/fmh1.htm"
-                           xlink:title="Federal Meteorological Handbook No.1 - Surface Weather Observations and Reports"/>
-      <om:featureOfInterest>
-        <sams:SF_SpatialSamplingFeature gml:id="samplePt-KPTK">
-          <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint" xlink:title="SF_SamplingPoint"/>
-          <sf:sampledFeature>
-            <saf:Aerodrome gml:id="uuid.6f8c4667-9391-414e-adad-f88723f4f69b">
-              <gml:identifier codeSpace="urn:uuid:">6f8c4667-9391-414e-adad-f88723f4f69b</gml:identifier>
-              <saf:designator>KPTK</saf:designator>
-              <saf:name>Pontiac/Oakland Co Intl, MI</saf:name>
-              <saf:locationIndicatorICAO>KPTK</saf:locationIndicatorICAO>
-              <saf:ARP>
-                <gml:Point axisLabels="Lat Lon Altitude" gml:id="reference-Pt-KPTK" srsName="urn:ogc:def:crs:EPSG::4979" uomLabels="deg deg m">
-                  <gml:pos>42.67 -83.42 299</gml:pos>
-                </gml:Point>
-              </saf:ARP>
-            </saf:Aerodrome>
-          </sf:sampledFeature>
-          <sams:shape xlink:href="#reference-Pt-KPTK"/>
-        </sams:SF_SpatialSamplingFeature>
-      </om:featureOfInterest>
-      <om:result>
-        <iwxxm-us:MeteorologicalAerodromeObservationRecord cloudAndVisibilityOK="false" gml:id="KPTK-maor">
-          <iwxxm:airTemperature uom="Cel">1.7</iwxxm:airTemperature>
-          <iwxxm:dewpointTemperature uom="Cel">1.1</iwxxm:dewpointTemperature>
-          <iwxxm:qnh uom="hPa">997.5</iwxxm:qnh>
-          <iwxxm:surfaceWind>
-            <iwxxm:AerodromeSurfaceWind variableDirection="true">
-              <iwxxm:meanWindSpeed uom="m/s">5.7</iwxxm:meanWindSpeed>
-              <iwxxm:extremeClockwiseWindDirection uom="deg">150</iwxxm:extremeClockwiseWindDirection>
-              <iwxxm:extremeCounterClockwiseWindDirection uom="deg">080</iwxxm:extremeCounterClockwiseWindDirection>
-            </iwxxm:AerodromeSurfaceWind>
-          </iwxxm:surfaceWind>
-          <iwxxm:visibility>
-            <iwxxm:AerodromeHorizontalVisibility>
-              <iwxxm:prevailingVisibility uom="m">1207.0</iwxxm:prevailingVisibility>
-            </iwxxm:AerodromeHorizontalVisibility>
-          </iwxxm:visibility>
-          <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/BR" xlink:title="Mist"/>
-          <iwxxm:cloud>
-            <iwxxm:AerodromeObservedClouds>
-              <iwxxm:verticalVisibility uom="ft">200</iwxxm:verticalVisibility>
-            </iwxxm:AerodromeObservedClouds>
-          </iwxxm:cloud>
-          <iwxxm-us:seaLevelPressure uom="hPa">998.5</iwxxm-us:seaLevelPressure>
-          <iwxxm-us:pressureTendency3hr uom="hPa">3.4</iwxxm-us:pressureTendency3hr>
-          <iwxxm-us:pressureTendencyCharacteristic3hr xlink:href="http://codes.wmo.int/common/bufr4/codeflag/0-10-063/8"/>
-          <iwxxm-us:statisticallyProcessedQuantity>
-            <iwxxm-us:extremeValuePeriod unit="hour">1</iwxxm-us:extremeValuePeriod>
-            <iwxxm-us:extremeValueType xlink:href="http://codes.wmo.int/grib2/codeflag/4.10/1" xlink:title="Accumulation"/>
-            <iwxxm-us:processedValue uom="kg/(s-m^2)">0.00e+00</iwxxm-us:processedValue>
-            <iwxxm-us:processedWeatherElement xlink:href="http://nws.weather.gov/codes/FMH-1/2005/StatisticallyProcessedWeatherElements/PrecipitationRate/"/>
-          </iwxxm-us:statisticallyProcessedQuantity>
-          <iwxxm-us:statisticallyProcessedQuantity>
-            <iwxxm-us:extremeValuePeriod unit="hour">3</iwxxm-us:extremeValuePeriod>
-            <iwxxm-us:extremeValueType xlink:href="http://codes.wmo.int/grib2/codeflag/4.10/1" xlink:title="Accumulation"/>
-            <iwxxm-us:processedValue uom="kg/(s-m^2)">1.41e-04</iwxxm-us:processedValue>
-            <iwxxm-us:processedWeatherElement xlink:href="http://nws.weather.gov/codes/FMH-1/2005/StatisticallyProcessedWeatherElements/PrecipitationRate/"/>
-          </iwxxm-us:statisticallyProcessedQuantity>
-          <iwxxm-us:variationsInObservedProperties>
-            <iwxxm-us:beginEndWeather>
-              <iwxxm-us:weatherBeginEndTime gml:id="DZ-E0215Z">
-                <gml:timePosition>2015-07-21T02:15:00Z</gml:timePosition>
-              </iwxxm-us:weatherBeginEndTime>
-              <iwxxm-us:weatherBeginOrEnd xlink:href="http://nws.weather.gov/codes/FMH-1/2005/BeginOrEnd/END"/>
-              <iwxxm-us:weatherType xlink:href="http://codes.wmo.int/306/4678/DZ" xlink:title="Precipitation of drizzle"/>
-            </iwxxm-us:beginEndWeather>
-            <iwxxm-us:variableRVR>
-              <iwxxm-us:runway>
-                <saf:RunwayDirection gml:id="VRBRVRRWY_09R">
-                  <saf:designator>09R</saf:designator>
-                </saf:RunwayDirection>
-              </iwxxm-us:runway>
-              <iwxxm-us:maximumRVR uom="m">1676.4</iwxxm-us:maximumRVR>
-              <iwxxm-us:minimumRVR uom="m">853.4</iwxxm-us:minimumRVR>
-            </iwxxm-us:variableRVR>
-          </iwxxm-us:variationsInObservedProperties>
-        </iwxxm-us:MeteorologicalAerodromeObservationRecord>
-      </om:result>
-    </om:OM_Observation>
-  </iwxxm:observation>
-  <iwxxm-us:observingSystemType xlink:href="http://nws.weather.gov/codes/FMH-1/2005/ObservingSystemType/AUTOMATED_WITH_PRESENT_WEATHER"/>
+<iwxxm-us:METAR xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:iwxxm="http://icao.int/iwxxm/1.1"
+                xmlns:iwxxm-us="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release"
+                xmlns:om="http://www.opengis.net/om/2.0" xmlns:saf="http://icao.int/saf/1.1"
+                xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+                xmlns:sf="http://www.opengis.net/sampling/2.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+                automatedStation="false"
+                gml:id="METAR-KPTK-201507210253Z" status="NORMAL"
+        >
+    <iwxxm:observation>
+        <om:OM_Observation gml:id="obs-KPTK-20150721T025300Z">
+            <om:type
+                    xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeterologicalAerodromeObservation"/>
+            <om:phenomenonTime>
+                <gml:TimeInstant gml:id="metar-KPTK-201507210253Z">
+                    <gml:timePosition>2015-07-21T02:53:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:phenomenonTime>
+            <om:resultTime xlink:href="#metar-KPTK-201507210253Z"/>
+            <om:procedure xlink:href="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release/FMH1-METAR-SPECI.xml"/>
+            <om:observedProperty xlink:href="http://www.ofcm.gov/fmh-1/fmh1.htm"
+                                 xlink:title="Federal Meteorological Handbook No.1 - Surface Weather Observations and Reports"/>
+            <om:featureOfInterest>
+                <sams:SF_SpatialSamplingFeature gml:id="samplePt-KPTK">
+                    <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"
+                             xlink:title="SF_SamplingPoint"/>
+                    <sf:sampledFeature>
+                        <saf:Aerodrome gml:id="uuid.6f8c4667-9391-414e-adad-f88723f4f69b">
+                            <gml:identifier codeSpace="urn:uuid:">6f8c4667-9391-414e-adad-f88723f4f69b</gml:identifier>
+                            <saf:designator>KPTK</saf:designator>
+                            <saf:name>Pontiac/Oakland Co Intl, MI</saf:name>
+                            <saf:locationIndicatorICAO>KPTK</saf:locationIndicatorICAO>
+                            <saf:ARP>
+                                <gml:Point axisLabels="Lat Lon Altitude" gml:id="reference-Pt-KPTK"
+                                           srsName="urn:ogc:def:crs:EPSG::4979" uomLabels="deg deg m">
+                                    <gml:pos>42.67 -83.42 299</gml:pos>
+                                </gml:Point>
+                            </saf:ARP>
+                        </saf:Aerodrome>
+                    </sf:sampledFeature>
+                    <sams:shape xlink:href="#reference-Pt-KPTK"/>
+                </sams:SF_SpatialSamplingFeature>
+            </om:featureOfInterest>
+            <om:result>
+                <iwxxm-us:MeteorologicalAerodromeObservationRecord cloudAndVisibilityOK="false" gml:id="KPTK-maor">
+                    <iwxxm:airTemperature uom="Cel">1.7</iwxxm:airTemperature>
+                    <iwxxm:dewpointTemperature uom="Cel">1.1</iwxxm:dewpointTemperature>
+                    <iwxxm:qnh uom="hPa">997.5</iwxxm:qnh>
+                    <iwxxm:surfaceWind>
+                        <iwxxm:AerodromeSurfaceWind variableDirection="true">
+                            <iwxxm:meanWindSpeed uom="m/s">5.7</iwxxm:meanWindSpeed>
+                            <iwxxm:extremeClockwiseWindDirection uom="deg">150</iwxxm:extremeClockwiseWindDirection>
+                            <iwxxm:extremeCounterClockwiseWindDirection uom="deg">080
+                            </iwxxm:extremeCounterClockwiseWindDirection>
+                        </iwxxm:AerodromeSurfaceWind>
+                    </iwxxm:surfaceWind>
+                    <iwxxm:visibility>
+                        <iwxxm:AerodromeHorizontalVisibility>
+                            <iwxxm:prevailingVisibility uom="m">1207.0</iwxxm:prevailingVisibility>
+                        </iwxxm:AerodromeHorizontalVisibility>
+                    </iwxxm:visibility>
+                    <iwxxm:presentWeather xlink:href="http://codes.wmo.int/306/4678/BR" xlink:title="Mist"/>
+                    <iwxxm:cloud>
+                        <iwxxm:AerodromeObservedClouds>
+                            <iwxxm:verticalVisibility uom="ft">200</iwxxm:verticalVisibility>
+                        </iwxxm:AerodromeObservedClouds>
+                    </iwxxm:cloud>
+                    <iwxxm-us:seaLevelPressure uom="hPa">998.5</iwxxm-us:seaLevelPressure>
+                    <iwxxm-us:pressureTendency3hr uom="hPa">3.4</iwxxm-us:pressureTendency3hr>
+                    <iwxxm-us:pressureTendencyCharacteristic3hr
+                            xlink:href="http://codes.wmo.int/common/bufr4/codeflag/0-10-063/8"/>
+                    <iwxxm-us:statisticallyProcessedQuantity>
+                        <iwxxm-us:extremeValuePeriod unit="hour">1</iwxxm-us:extremeValuePeriod>
+                        <iwxxm-us:extremeValueType xlink:href="http://codes.wmo.int/grib2/codeflag/4.10/1"
+                                                   xlink:title="Accumulation"/>
+                        <iwxxm-us:processedValue uom="kg/(s-m^2)">0.00e+00</iwxxm-us:processedValue>
+                        <iwxxm-us:processedWeatherElement
+                                xlink:href="http://nws.weather.gov/codes/FMH-1/2005/StatisticallyProcessedWeatherElements/PrecipitationRate/"/>
+                    </iwxxm-us:statisticallyProcessedQuantity>
+                    <iwxxm-us:statisticallyProcessedQuantity>
+                        <iwxxm-us:extremeValuePeriod unit="hour">3</iwxxm-us:extremeValuePeriod>
+                        <iwxxm-us:extremeValueType xlink:href="http://codes.wmo.int/grib2/codeflag/4.10/1"
+                                                   xlink:title="Accumulation"/>
+                        <iwxxm-us:processedValue uom="kg/(s-m^2)">1.41e-04</iwxxm-us:processedValue>
+                        <iwxxm-us:processedWeatherElement
+                                xlink:href="http://nws.weather.gov/codes/FMH-1/2005/StatisticallyProcessedWeatherElements/PrecipitationRate/"/>
+                    </iwxxm-us:statisticallyProcessedQuantity>
+                    <iwxxm-us:variationsInObservedProperties>
+                        <iwxxm-us:beginEndWeather>
+                            <iwxxm-us:weatherBeginEndTime gml:id="DZ-E0215Z">
+                                <gml:timePosition>2015-07-21T02:15:00Z</gml:timePosition>
+                            </iwxxm-us:weatherBeginEndTime>
+                            <iwxxm-us:weatherBeginOrEnd
+                                    xlink:href="http://nws.weather.gov/codes/FMH-1/2005/BeginOrEnd/END"/>
+                            <iwxxm-us:weatherType xlink:href="http://codes.wmo.int/306/4678/DZ"
+                                                  xlink:title="Precipitation of drizzle"/>
+                        </iwxxm-us:beginEndWeather>
+                        <iwxxm-us:variableRVR>
+                            <iwxxm-us:runway>
+                                <saf:RunwayDirection gml:id="VRBRVRRWY_09R">
+                                    <saf:designator>09R</saf:designator>
+                                </saf:RunwayDirection>
+                            </iwxxm-us:runway>
+                            <iwxxm-us:maximumRVR uom="m">1676.4</iwxxm-us:maximumRVR>
+                            <iwxxm-us:minimumRVR uom="m">853.4</iwxxm-us:minimumRVR>
+                        </iwxxm-us:variableRVR>
+                    </iwxxm-us:variationsInObservedProperties>
+                </iwxxm-us:MeteorologicalAerodromeObservationRecord>
+            </om:result>
+        </om:OM_Observation>
+    </iwxxm:observation>
+    <iwxxm-us:observingSystemType
+            xlink:href="http://nws.weather.gov/codes/FMH-1/2005/ObservingSystemType/AUTOMATED_WITH_PRESENT_WEATHER"/>
 </iwxxm-us:METAR>
 

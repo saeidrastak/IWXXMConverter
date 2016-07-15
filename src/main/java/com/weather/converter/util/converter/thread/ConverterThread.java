@@ -3,12 +3,9 @@ package com.weather.converter.util.converter.thread;
 import com.weather.converter.util.common.ApplicationUtils;
 import com.weather.converter.util.converter.TACConverter;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Created by Rastakfard (Saeid.Rastak@Gmail.com) on 1/5/2016.
@@ -17,7 +14,7 @@ public class ConverterThread implements Callable<List<String>> {
 
     private final TACConverter tacConverter;
     List<String> xmlFilePaths;
-    String  destinationFileDir;
+    String destinationFileDir;
     Integer threadNumber;
     boolean replace = false;
 
@@ -37,8 +34,8 @@ public class ConverterThread implements Callable<List<String>> {
         List<String> metarResults = new ArrayList<String>();
         for (String path : xmlFilePaths) {
             tacConverter.initTAC(path);
-            String pathSeparator= ApplicationUtils.getPathSeparator();
-            String fileName = path.substring(path.lastIndexOf(pathSeparator) + 1).replace(".xml",".tac");
+            String pathSeparator = ApplicationUtils.getPathSeparator();
+            String fileName = path.substring(path.lastIndexOf(pathSeparator) + 1).replace(".xml", ".tac");
             String metarResult = tacConverter.buildTACFile(destinationFileDir + pathSeparator + fileName, replace);
             metarResults.add(metarResult);
         }

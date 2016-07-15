@@ -1,15 +1,15 @@
 package com.weather.converter.main;
 
-import com.weather.converter.util.common.ArgumentParser;
 import com.weather.converter.util.common.ApplicationUtils;
-import com.weather.converter.util.converter.*;
+import com.weather.converter.util.common.ArgumentParser;
+import com.weather.converter.util.converter.MetarSPECIConverter;
+import com.weather.converter.util.converter.SIGMETConverter;
+import com.weather.converter.util.converter.TACConverter;
+import com.weather.converter.util.converter.TAFConverter;
 import com.weather.converter.util.converter.thread.ConverterThread;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -31,15 +31,15 @@ public class WXXMConversionApplication {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException, IOException {
 
-
         ArgumentParser argumentParser = new ArgumentParser();
         HashMap<String, Object> params = argumentParser.parseArgs(args);
         List<String> filePaths = readFiles((String) params.get("sourceFolderArg"));
 //        tafExample(params);
-        convertToTac(filePaths, (String) params.get("tacTypeArg"), (String) params.get("destinationFolderArg"), (Boolean) params.get("silent"),(Boolean) params.get("replace"));
+        convertToTac(filePaths, (String) params.get("tacTypeArg"),
+                (String) params.get("destinationFolderArg"),
+                (Boolean) params.get("silent"), (Boolean) params.get("replace"));
+
     }
-
-
 
 
     private static List<String> readFiles(String sourceFileDir) {
@@ -69,7 +69,7 @@ public class WXXMConversionApplication {
         int i = 0;
         List<String> sourceFileSubList;
         TACConverter tacConverter = null;
-        if (filesCount==0){
+        if (filesCount == 0) {
             System.exit(-1);
         }
         System.out.println("Start processing source directory files...");
@@ -108,12 +108,12 @@ public class WXXMConversionApplication {
                     System.out.println();
                 }
             }
-            totalFiles+=result.size();
+            totalFiles += result.size();
         }
 
 
         System.out.println("Converting " + tacType.toUpperCase() + " files finished.");
         System.out.println("Total Converted files is : " + filesCount);
-        System.out.println("You can see converted files at " + destinationFileDir );
+        System.out.println("You can see converted files at " + destinationFileDir);
     }
 }

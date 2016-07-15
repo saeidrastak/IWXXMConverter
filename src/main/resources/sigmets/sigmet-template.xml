@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<iwxxm-us:SIGMET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release/schemas/usSigmet.xsd ../../schemas/usSigmet.xsd" 
- xmlns:iwxxm="http://icao.int/iwxxm/1.1"
- xmlns:iwxxm-us="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release"
- xmlns:om="http://www.opengis.net/om/2.0" 
- xmlns:saf="http://icao.int/saf/1.1"
- xmlns:wxxm="http://www.wxxm.aero/wxxm/2.0"
- xmlns:gml="http://www.opengis.net/gml/3.2" status="CANCELLATION" gml:id="sigmet">
+<iwxxm-us:SIGMET
+        xmlns:iwxxm="http://icao.int/iwxxm/1.1"
+        xmlns:iwxxm-us="http://nws.weather.gov/schemas/IWXXM-US/1.0/Release"
+        xmlns:om="http://www.opengis.net/om/2.0"
+        xmlns:saf="http://icao.int/saf/1.1"
+        xmlns:gml="http://www.opengis.net/gml/3.2"
+        status="CANCELLATION" gml:id="sigmet">
     <!--
     The ATS unit serving the FIR or CTA to which the SIGMET refers
     -->
-    <iwxxm:issuingAirTrafficServicesUnit >
+    <iwxxm:issuingAirTrafficServicesUnit>
         <saf:Unit gml:id="fo1"></saf:Unit>
     </iwxxm:issuingAirTrafficServicesUnit>
-    <iwxxm:originatingMeteorologicalWatchOffice >
+    <iwxxm:originatingMeteorologicalWatchOffice>
         <saf:Unit gml:id="fo2"></saf:Unit>
     </iwxxm:originatingMeteorologicalWatchOffice>
     <iwxxm:sequenceNumber></iwxxm:sequenceNumber>
@@ -22,7 +21,7 @@
      Each observation/forecast phenomenon includes its own period of validity for described
      meteorological conditions, which is represented as the O&M Observation validTime.
     -->
-    <iwxxm:validPeriod >
+    <iwxxm:validPeriod>
         <gml:TimePeriod gml:id="fo3">
             <gml:begin></gml:begin>
             <gml:end></gml:end>
@@ -33,13 +32,13 @@
         however they must appear when status="CANCELLATION"
     -->
     <iwxxm:cancelledSequenceNumber></iwxxm:cancelledSequenceNumber>
-    <iwxxm:cancelledValidPeriod >
+    <iwxxm:cancelledValidPeriod>
         <gml:TimePeriod gml:id="fo13">
             <gml:begin></gml:begin>
             <gml:end></gml:end>
         </gml:TimePeriod>
     </iwxxm:cancelledValidPeriod>
-    <iwxxm:phenomenon />
+    <iwxxm:phenomenon/>
     <!-- 
         <iwxxm:analysis> is optional but unbounded in number [0..*]
     -->

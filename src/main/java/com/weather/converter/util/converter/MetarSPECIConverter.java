@@ -1,7 +1,6 @@
 package com.weather.converter.util.converter;
 
 import com.weather.converter.util.common.ApplicationUtils;
-import com.weather.converter.util.common.MeteorologicalNamespaces;
 import com.weather.converter.util.iwxxm.CommonUtils;
 import com.weather.converter.util.iwxxm.METARUtils;
 import com.weather.converter.util.iwxxm.WindConverter;
@@ -264,7 +263,7 @@ public class MetarSPECIConverter extends TACConverter {
                         prevailingHorizontalVisibilityStr = "00" + phvInMeters;
                     } else if (phvInMeters >= 10000) {
                         prevailingHorizontalVisibilityStr = "9999";
-                    }else if (phvInMeters <10000){
+                    } else if (phvInMeters < 10000) {
                         prevailingHorizontalVisibilityStr = String.valueOf(phvInMeters);
                     }
                     tacResult.append(prevailingHorizontalVisibilityStr + SPACE);

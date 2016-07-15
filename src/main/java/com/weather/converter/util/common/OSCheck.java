@@ -3,17 +3,14 @@ package com.weather.converter.util.common;
 /**
  * Created by Rastakfard (Saeid.Rastak@Gmail.com) on 1/5/2016.
  */
-import java.util.Locale;
-public final class OSCheck {
-    /**
-     * types of Operating Systems
-     */
-    public enum OSType {
-        Windows, MacOS, Linux, Other
-    };
 
+import java.util.Locale;
+
+public final class OSCheck {
     // cached result of OS detection
     protected static OSType detectedOS;
+
+    ;
 
     /**
      * detect the operating system from the os.name System property and cache
@@ -35,5 +32,12 @@ public final class OSCheck {
             }
         }
         return detectedOS;
+    }
+
+    /**
+     * types of Operating Systems
+     */
+    public enum OSType {
+        Windows, MacOS, Linux, Other
     }
 }

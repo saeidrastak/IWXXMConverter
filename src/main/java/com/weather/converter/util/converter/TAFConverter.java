@@ -1,7 +1,6 @@
 package com.weather.converter.util.converter;
 
 import com.weather.converter.util.common.ApplicationUtils;
-import com.weather.converter.util.common.MeteorologicalNamespaces;
 import com.weather.converter.util.iwxxm.CommonUtils;
 import com.weather.converter.util.iwxxm.METARUtils;
 import com.weather.converter.util.iwxxm.WindConverter;

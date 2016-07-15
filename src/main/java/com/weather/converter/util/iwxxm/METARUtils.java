@@ -15,21 +15,6 @@ import java.io.IOException;
 public class METARUtils extends CommonUtils implements WeatherLoader {
     private static final String SPACE = " ";
 
-    @Override
-    public METARDocument loadMETARDocument(String xmlFilePath) throws IOException, XmlException {
-        return METARDocument.Factory.parse(new FileInputStream(xmlFilePath));
-    }
-
-    @Override
-    public void saveMETARDocument(METARDocument metarDocument, String xmlFilePath) {
-        writeXmlFile(metarDocument, xmlFilePath);
-    }
-
-    @Override
-    public METARDocument initNewMETARDocument() {
-        return METARDocument.Factory.newInstance();
-    }
-
     public static String getMeanWindDirectionString(Double meanWindDirection) {
         String meanWindDirectionStr;
         if (meanWindDirection < 10) {
@@ -41,6 +26,7 @@ public class METARUtils extends CommonUtils implements WeatherLoader {
         }
         return meanWindDirectionStr;
     }
+
     public static String getWindUnit(String uom) {
         if (uom.endsWith("m/s")) {
             return "MPS";
@@ -94,12 +80,27 @@ public class METARUtils extends CommonUtils implements WeatherLoader {
 
     private static Double convertToFeet(Double base, String unit) {
         if ("http://opengis.net/def/uom/UCUM/0/m".equalsIgnoreCase(unit)
-                || "m".equalsIgnoreCase(unit)){
+                || "m".equalsIgnoreCase(unit)) {
 //            return base * 3.28084;
-            return base /30;
-        } else if ("ft".equalsIgnoreCase(unit) || unit.endsWith("ft")){
+            return base / 30;
+        } else if ("ft".equalsIgnoreCase(unit) || unit.endsWith("ft")) {
             return base;
         }
         throw new RuntimeException("invalid unit " + unit + "!");
+    }
+
+    @Override
+    public METARDocument loadMETARDocument(String xmlFilePath) throws IOException, XmlException {
+        return METARDocument.Factory.parse(new FileInputStream(xmlFilePath));
+    }
+
+    @Override
+    public void saveMETARDocument(METARDocument metarDocument, String xmlFilePath) {
+        writeXmlFile(metarDocument, xmlFilePath);
+    }
+
+    @Override
+    public METARDocument initNewMETARDocument() {
+        return METARDocument.Factory.newInstance();
     }
 }
